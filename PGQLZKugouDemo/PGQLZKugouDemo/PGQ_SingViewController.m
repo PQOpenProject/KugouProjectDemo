@@ -9,7 +9,6 @@
 #import "PGQ_SingViewController.h"
 #import "BasicHeader.h"
 @interface PGQ_SingViewController ()
-@property (weak, nonatomic) IBOutlet UIScrollView *bodySrcollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *topScrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
@@ -29,7 +28,7 @@
         imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"Image%d",(int)i]];
         [self.topScrollView addSubview:imgView];
     }
-    self.topScrollView.contentSize = CGSizeMake(4 * self.topScrollView.width, 0);
+    self.topScrollView.contentSize = CGSizeMake(4 * self.topScrollView.width, 1500);
     self.topScrollView.showsVerticalScrollIndicator = NO;
     self.topScrollView.showsHorizontalScrollIndicator = NO;
     self.topScrollView.bounces = NO;
@@ -44,8 +43,26 @@
 
 
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"sing page");
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    UITouch * touch = [touches anyObject];
+//    CGPoint current = [touch locationInView:self.topScrollView];
+//    
+//}
+
+- (BOOL)touchesShouldBegin:(NSSet *)touches withEvent:(UIEvent *)event inContentView:(UIView *)view
+{
+    // 获取一个UITouch
+    UITouch *touch = [touches anyObject];
+    // 获取当前的位置
+    CGPoint current = [touch locationInView:self.topScrollView];
+    CGFloat y = 280;
+    if (current.y >= y+ 10) {
+        //在地图上
+        NSLog(@"滚动地图");
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 /*

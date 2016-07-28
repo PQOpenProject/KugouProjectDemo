@@ -8,6 +8,7 @@
 
 #import "PGQ_BaseCenterView.h"
 #import "BasicHeader.h"
+#import "UIScrollView+PQScrollExtension.h"
 @interface PGQ_BaseCenterView ()<UIScrollViewDelegate>
 
 @property (nonatomic,copy) PGQ_BaseCenterViewPageIndexBlock pageIndexBlock;
@@ -84,13 +85,5 @@
     _pageIndex = (int)offset;
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [super touchesBegan:touches withEvent:event];
-}
-
-- (BOOL)touchesShouldBegin:(NSSet *)touches withEvent:(UIEvent *)event inContentView:(UIView *)view
-{
-    return YES;
-}
 @end
 
