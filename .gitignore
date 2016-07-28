@@ -18,6 +18,8 @@ DerivedData/
 xcuserdata/
 
 .DS_Store
+podfile.lock
+Podfile.lock
 
 ## Other
 *.moved-aside
