@@ -38,25 +38,32 @@
     NSArray * titles = @[@"",@"听",@"看",@"唱",@""];
     UIView * view1 = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.width/5, self.height*0.8)];
     UIButton *btn = [self buttonWithTag:0 imageName:@"default_headIcon"];
-    
+//    if (i == 1)
+//    {
+//        btn.selected = YES;
+//        self.lastBtn = btn;
+//        UIImageView *imgView = [[UIImageView alloc]initWithFrame:self.frame];
+//        UIImage *backImg = [UIImage imageNamed:@"fx_mobileList_download_bg"];
+//        imgView.image = backImg;
+//        [self addSubview:imgView];
+//    }
     [view1 addSubview:btn];
+//    view1.backgroundColor = [UIColor redColor];
     [self addSubview:view1];
     for (NSInteger i = 1; i < 5; i++) {
         UIView * view = [[UIView alloc]initWithFrame:CGRectMake(i * (self.width/5), 0, self.width/5, self.height*0.8)];
+        
         if (i == 4){
             UIButton *btn = [self buttonWithTag:i imageName:@"colorring_search"];
             [view addSubview:btn];
         }else{
             UIButton *btn = [self buttonWithTag:i text:titles[i]];
             [view addSubview:btn];
-            if (i == 1) {
-                btn.selected = YES;
-                self.lastBtn = btn;
-            }
         }
         [self addSubview:view];
         [self.buttons addObject:view];
     }
+    
 }
 
 - (UIButton *)buttonWithTag:(NSInteger)tag text:(NSString *)textName{
