@@ -65,6 +65,26 @@
     [self initUI];
     //处理事件
     [self event];
+    
+    
+//    UIAlertController * ac = [UIAlertController pq_alertViewWithTitle:@"提示" message:@"哈哈" Cancel:nil other:@"确定" cancelBlock:nil otherBlock:^{
+//        NSLog(@"你看看");
+//    }];
+//    [self presentViewController:ac animated:YES completion:nil];
+    
+//    UIAlertController * ac1 = [UIAlertController pq_alertViewAccountAndPasswordWithTitle:@"提示" message:@"请输入用户名和密码" Cancel:@"取消" other:@"确定" cancelBlock:^{
+//        NSLog(@"cancel");
+//    } otherBlock:^(NSString * _Nullable account, NSString * _Nullable password) {
+//        NSLog(@"%@ %@",account,password);
+//    }];
+//    [self presentViewController:ac1 animated:YES completion:nil];
+    
+    
+    UIAlertController * ac2 = [UIAlertController pq_alertViewInputTextWithTitle:@"您好" message:@"请输入您的昵称" Cancel:nil other:@"确定" placeholder:@"比如：王尼玛" cancelBlock:nil otherBlock:^(NSString * _Nullable text) {
+        NSLog(@"%@",text);
+    }];
+    [self presentViewController:ac2 animated:YES completion:nil];
+    
 }
 
 - (void)event{

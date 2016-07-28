@@ -22,6 +22,7 @@
 
 //category
 #import "UIView+pgqViewExtension.h"
+#import "UIAlertController+PQ_alertView.h"
 
 //third party
 #import "Masonry.h"

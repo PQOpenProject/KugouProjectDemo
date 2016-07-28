@@ -18,6 +18,7 @@
 		818545AA1D42231500FFA8B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818545A81D42231500FFA8B2 /* LaunchScreen.storyboard */; };
 		818545B51D42231500FFA8B2 /* PGQLZKugouDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 818545B41D42231500FFA8B2 /* PGQLZKugouDemoTests.m */; };
 		818545C01D42231500FFA8B2 /* PGQLZKugouDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 818545BF1D42231500FFA8B2 /* PGQLZKugouDemoUITests.m */; };
+		8188F9361D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188F9351D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m */; };
 		81F5F0351D45A27000A65198 /* IntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F0341D45A27000A65198 /* IntroduceViewController.m */; };
 		81F5F0391D45A29100A65198 /* PLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F0381D45A29100A65198 /* PLNavigationViewController.m */; };
 		81F5F0401D45A29A00A65198 /* UIControl+PQControlExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F03B1D45A29A00A65198 /* UIControl+PQControlExtension.m */; };
@@ -73,6 +74,8 @@
 		818545BB1D42231500FFA8B2 /* PGQLZKugouDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGQLZKugouDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		818545BF1D42231500FFA8B2 /* PGQLZKugouDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGQLZKugouDemoUITests.m; sourceTree = "<group>"; };
 		818545C11D42231500FFA8B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8188F9341D4A09E1001A1E75 /* UIAlertController+PQ_alertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+PQ_alertView.h"; sourceTree = "<group>"; };
+		8188F9351D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+PQ_alertView.m"; sourceTree = "<group>"; };
 		81F5F0321D45A26300A65198 /* BasicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicHeader.h; sourceTree = "<group>"; };
 		81F5F0331D45A27000A65198 /* IntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroduceViewController.h; sourceTree = "<group>"; };
 		81F5F0341D45A27000A65198 /* IntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroduceViewController.m; sourceTree = "<group>"; };
@@ -298,6 +301,8 @@
 		81F5F0311D45A22700A65198 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				8188F9341D4A09E1001A1E75 /* UIAlertController+PQ_alertView.h */,
+				8188F9351D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m */,
 				81F5F03A1D45A29A00A65198 /* UIControl+PQControlExtension.h */,
 				81F5F03B1D45A29A00A65198 /* UIControl+PQControlExtension.m */,
 				81F5F03C1D45A29A00A65198 /* UIImage+pgqImageExtension.h */,
@@ -577,6 +582,7 @@
 				81F5F0391D45A29100A65198 /* PLNavigationViewController.m in Sources */,
 				81F5F0491D45A5AB00A65198 /* BaseViewModel.m in Sources */,
 				81F5F0411D45A29A00A65198 /* UIImage+pgqImageExtension.m in Sources */,
+				8188F9361D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m in Sources */,
 				818545A21D42231500FFA8B2 /* BaseViewController.m in Sources */,
 				8185459F1D42231500FFA8B2 /* AppDelegate.m in Sources */,
 				81F5F0531D45A79B00A65198 /* PGQ_BaseTopView.m in Sources */,
