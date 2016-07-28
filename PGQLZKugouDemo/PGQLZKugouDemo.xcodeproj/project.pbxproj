@@ -30,6 +30,7 @@
 		81F5F0631D4602CE00A65198 /* PGQ_SingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F0611D4602CE00A65198 /* PGQ_SingViewController.m */; };
 		81F5F0641D4602CE00A65198 /* PGQ_SingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81F5F0621D4602CE00A65198 /* PGQ_SingViewController.xib */; };
 		D6425782056D8E7FB49D4AB7 /* libPods-PGQLZKugouDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 753492DADBD2BCAE33AA963E /* libPods-PGQLZKugouDemo.a */; };
+		EDACACFA1D49EF650053530B /* ListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDACACF91D49EF650053530B /* ListenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,8 @@
 		81F5F0601D4602CE00A65198 /* PGQ_SingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGQ_SingViewController.h; sourceTree = "<group>"; };
 		81F5F0611D4602CE00A65198 /* PGQ_SingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGQ_SingViewController.m; sourceTree = "<group>"; };
 		81F5F0621D4602CE00A65198 /* PGQ_SingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PGQ_SingViewController.xib; sourceTree = "<group>"; };
+		EDACACF81D49EF650053530B /* ListenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenViewController.h; sourceTree = "<group>"; };
+		EDACACF91D49EF650053530B /* ListenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenViewController.m; sourceTree = "<group>"; };
 		F48CAF81A18C9FBBD374F1F9 /* Pods-PGQLZKugouDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGQLZKugouDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PGQLZKugouDemo/Pods-PGQLZKugouDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -245,6 +248,7 @@
 		81F5F02B1D45A18400A65198 /* 听 */ = {
 			isa = PBXGroup;
 			children = (
+				EDACACF61D49ED010053530B /* Listen */,
 			);
 			name = "听";
 			sourceTree = "<group>";
@@ -374,6 +378,23 @@
 				F48CAF81A18C9FBBD374F1F9 /* Pods-PGQLZKugouDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EDACACF61D49ED010053530B /* Listen */ = {
+			isa = PBXGroup;
+			children = (
+				EDACACF71D49EF2E0053530B /* ViewController */,
+			);
+			name = Listen;
+			sourceTree = "<group>";
+		};
+		EDACACF71D49EF2E0053530B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EDACACF81D49EF650053530B /* ListenViewController.h */,
+				EDACACF91D49EF650053530B /* ListenViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -566,6 +587,7 @@
 				81F5F05B1D45A88A00A65198 /* PGQ_BaseCenterView.m in Sources */,
 				81F5F0351D45A27000A65198 /* IntroduceViewController.m in Sources */,
 				81F5F0391D45A29100A65198 /* PLNavigationViewController.m in Sources */,
+				EDACACFA1D49EF650053530B /* ListenViewController.m in Sources */,
 				81F5F0491D45A5AB00A65198 /* BaseViewModel.m in Sources */,
 				81F5F0411D45A29A00A65198 /* UIImage+pgqImageExtension.m in Sources */,
 				818545A21D42231500FFA8B2 /* BaseViewController.m in Sources */,

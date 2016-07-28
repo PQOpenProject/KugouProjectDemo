@@ -83,11 +83,14 @@
     
     UIViewController * controller2 = [[UIViewController alloc] init];
     controller2.view.backgroundColor = [UIColor greenColor];
+
+//    UIViewController * controller3 = [[UIViewController alloc] init];
+//    controller3.view.backgroundColor = [UIColor redColor];
+    //Listen VC
+    ListenViewController *listenVC = [[ListenViewController alloc]init];
+    listenVC.view.backgroundColor = [UIColor whiteColor];
     
-    UIViewController * controller3 = [[UIViewController alloc] init];
-    controller3.view.backgroundColor = [UIColor redColor];
-    
-    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[controller3.view,controller2.view,self.singVC.view] PageBlock:^(NSInteger pageIndex) {
+    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[listenVC.view,controller2.view,self.singVC.view] PageBlock:^(NSInteger pageIndex) {
         NSLog(@"scroll - pageindex %ld",pageIndex);
         [self.baseVM.scrollCommand execute:@(pageIndex)];
     }];
