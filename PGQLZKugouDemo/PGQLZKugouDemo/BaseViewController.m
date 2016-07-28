@@ -102,7 +102,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"%@",self);
+    NSLog(@"%@ - 接收到touce",self);
 }
 
 
