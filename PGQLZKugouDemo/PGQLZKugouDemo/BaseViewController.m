@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+}
+
+- (void)updateForImage{
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"hyjm1"]];
 }
 
 - (void)didReceiveMemoryWarning {
