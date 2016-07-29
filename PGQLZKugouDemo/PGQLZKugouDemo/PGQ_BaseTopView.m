@@ -18,7 +18,8 @@
 
 @property (nonatomic,copy) PGQ_BaseTopViewClickBlock clickBlock;
 
-
+@property (nonatomic,copy) PGQ_BaseTopViewIconBlock iconBblock;
+@property (nonatomic,copy) PGQ_BaseTopViewSearchBlock searchBlock;
 @end
 
 @implementation PGQ_BaseTopView
@@ -37,33 +38,21 @@
     
     NSArray * titles = @[@"",@"听",@"看",@"唱",@""];
     UIView * view1 = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.width/5, self.height*0.8)];
-    UIButton *btn = [self buttonWithTag:0 imageName:@"default_headIcon"];
-//    if (i == 1)
-//    {
-//        btn.selected = YES;
-//        self.lastBtn = btn;
-//        UIImageView *imgView = [[UIImageView alloc]initWithFrame:self.frame];
-//        UIImage *backImg = [UIImage imageNamed:@"fx_mobileList_download_bg"];
-//        imgView.image = backImg;
-//        [self addSubview:imgView];
-//    }
+    UIButton *btn = [self buttonWithimageName:@"default_headIcon" tag:1101];
     [view1 addSubview:btn];
-//    view1.backgroundColor = [UIColor redColor];
     [self addSubview:view1];
-    for (NSInteger i = 1; i < 5; i++) {
+    
+    UIView * view2 = [[UIView alloc]initWithFrame:CGRectMake(4 * (self.width/5), 0, self.width/5, self.height*0.8)];
+    UIButton *btn2 = [self buttonWithimageName:@"colorring_search" tag:1102];
+    [view2 addSubview:btn2];
+    [self addSubview:view2];
+    for (NSInteger i = 1; i < 4; i++) {
         UIView * view = [[UIView alloc]initWithFrame:CGRectMake(i * (self.width/5), 0, self.width/5, self.height*0.8)];
-        
-        if (i == 4){
-            UIButton *btn = [self buttonWithTag:i imageName:@"colorring_search"];
+        UIButton *btn = [self buttonWithTag:i text:titles[i]];
             [view addSubview:btn];
-        }else{
-            UIButton *btn = [self buttonWithTag:i text:titles[i]];
-            [view addSubview:btn];
-        }
         [self addSubview:view];
         [self.buttons addObject:view];
     }
-    
 }
 
 - (UIButton *)buttonWithTag:(NSInteger)tag text:(NSString *)textName{
@@ -73,6 +62,10 @@
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
     [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     btn.tag = tag-1;
+    if (tag == 1) {
+        btn.selected = YES;
+        self.lastBtn = btn;
+    }
     @weakify(self);
     [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
@@ -98,7 +91,7 @@
 }
 
 
-- (UIButton *)buttonWithTag:(NSInteger)tag imageName:(NSString *)imageName{
+- (UIButton *)buttonWithimageName:(NSString *)imageName tag:(NSInteger)tag{
     UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(self.height*0.6, self.height*0.2, self.height*0.6, self.height*0.6);
     [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
@@ -106,7 +99,10 @@
     @weakify(self);
     [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
-        self.clickBlock(btn,btn.tag);
+        if (btn.tag == 1101) {
+            self.iconBblock(btn,btn.tag);
+        }else
+            self.searchBlock(btn,btn.tag);
     }];
     return btn;
 }
@@ -126,9 +122,12 @@
     
 }
 
-+ (instancetype)pgq_BaseTopViewWithEvent:(PGQ_BaseTopViewClickBlock)clickBlock{
++ (instancetype)pgq_BaseTopViewWithEvent:(PGQ_BaseTopViewClickBlock)clickBlock icon:(PGQ_BaseTopViewIconBlock)icon search:(PGQ_BaseTopViewSearchBlock)block{
     PGQ_BaseTopView * topView = [[PGQ_BaseTopView alloc]initWithFrame:CGRectMake(0, 20, PL_SRCEEN_WIDTH, 44)];
     topView.clickBlock = clickBlock;
+    topView.iconBblock = icon;
+    topView.searchBlock = block;
+
     return topView;
 }
 @end

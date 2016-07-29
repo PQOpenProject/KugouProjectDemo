@@ -10,7 +10,14 @@
 
 @implementation ListenViewController
 
-
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    
+    UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
+    view.backgroundColor = [UIColor grayColor];
+    view.alpha = 0.8;
+    [self.view addSubview:view];
+}
 
 
 @end

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef void(^PGQ_BaseTopViewClickBlock)(UIButton * button ,NSInteger tag);
+typedef void(^PGQ_BaseTopViewIconBlock)(UIButton * button ,NSInteger tag);
+typedef void(^PGQ_BaseTopViewSearchBlock)(UIButton * button ,NSInteger tag);
 
 @interface PGQ_BaseTopView : UIView
 
@@ -19,7 +21,7 @@ typedef void(^PGQ_BaseTopViewClickBlock)(UIButton * button ,NSInteger tag);
  *
  *  @return
  */
-+ (instancetype)pgq_BaseTopViewWithEvent:(PGQ_BaseTopViewClickBlock)clickBlock;
++ (instancetype)pgq_BaseTopViewWithEvent:(PGQ_BaseTopViewClickBlock)clickBlock icon:(PGQ_BaseTopViewIconBlock)icon search:(PGQ_BaseTopViewSearchBlock)block;
 
 /**
  *  更新图片

@@ -44,6 +44,10 @@
     if (!_topView) {
         _topView = [PGQ_BaseTopView pgq_BaseTopViewWithEvent:^(UIButton *button, NSInteger tag) {
             [self.baseVM.scrollCommand execute:@(tag)];
+        } icon:^(UIButton *button, NSInteger tag) {
+            NSLog(@"icon");
+        } search:^(UIButton *button, NSInteger tag) {
+            NSLog(@"search");
         }];
     }
     return _topView;
