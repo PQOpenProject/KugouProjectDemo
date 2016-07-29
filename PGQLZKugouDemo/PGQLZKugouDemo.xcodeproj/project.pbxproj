@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8106F4B61D4B51A8002AE161 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106F4B51D4B51A8002AE161 /* BaseViewController.m */; };
 		8140ED1D1D49B442009D369F /* UIScrollView+PQScrollExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140ED1C1D49B442009D369F /* UIScrollView+PQScrollExtension.m */; };
 		8140ED1E1D49D1A2009D369F /* BasicHeader.h in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F0321D45A26300A65198 /* BasicHeader.h */; };
 		8140ED1F1D49D1AC009D369F /* BaseHeader.h in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F05D1D45B0FA00A65198 /* BaseHeader.h */; };
 		8185459C1D42231500FFA8B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8185459B1D42231500FFA8B2 /* main.m */; };
 		8185459F1D42231500FFA8B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8185459E1D42231500FFA8B2 /* AppDelegate.m */; };
-		818545A21D42231500FFA8B2 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818545A11D42231500FFA8B2 /* BaseViewController.m */; };
+		818545A21D42231500FFA8B2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818545A11D42231500FFA8B2 /* RootViewController.m */; };
 		818545A51D42231500FFA8B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818545A31D42231500FFA8B2 /* Main.storyboard */; };
 		818545A71D42231500FFA8B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818545A61D42231500FFA8B2 /* Assets.xcassets */; };
 		818545AA1D42231500FFA8B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818545A81D42231500FFA8B2 /* LaunchScreen.storyboard */; };
@@ -57,14 +58,16 @@
 /* Begin PBXFileReference section */
 		3366DF3804308D54B322D26B /* Pods-PGQLZKugouDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGQLZKugouDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PGQLZKugouDemo/Pods-PGQLZKugouDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		753492DADBD2BCAE33AA963E /* libPods-PGQLZKugouDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PGQLZKugouDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8106F4B41D4B51A8002AE161 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8106F4B51D4B51A8002AE161 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		8140ED1B1D49B442009D369F /* UIScrollView+PQScrollExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+PQScrollExtension.h"; sourceTree = "<group>"; };
 		8140ED1C1D49B442009D369F /* UIScrollView+PQScrollExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+PQScrollExtension.m"; sourceTree = "<group>"; };
 		818545971D42231500FFA8B2 /* PGQLZKugouDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PGQLZKugouDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8185459B1D42231500FFA8B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8185459D1D42231500FFA8B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8185459E1D42231500FFA8B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		818545A01D42231500FFA8B2 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		818545A11D42231500FFA8B2 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		818545A01D42231500FFA8B2 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		818545A11D42231500FFA8B2 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		818545A41D42231500FFA8B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		818545A61D42231500FFA8B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		818545A91D42231500FFA8B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -143,6 +146,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8106F4B31D4B5189002AE161 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8106F4B41D4B51A8002AE161 /* BaseViewController.h */,
+				8106F4B51D4B51A8002AE161 /* BaseViewController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 		8185458E1D42231400FFA8B2 = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +191,8 @@
 				81F5F0311D45A22700A65198 /* Category */,
 				81F5F02A1D45A17B00A65198 /* Plist */,
 				81F5F0291D45A16900A65198 /* Stroyboard */,
-				81F5F0281D45A15A00A65198 /* BaseViewController */,
+				8106F4B31D4B5189002AE161 /* Base */,
+				81F5F0281D45A15A00A65198 /* RootViewController */,
 				81F5F0271D45A14A00A65198 /* AppDelegate */,
 				818545A61D42231500FFA8B2 /* Assets.xcassets */,
 				8185459A1D42231500FFA8B2 /* Supporting Files */,
@@ -222,17 +235,17 @@
 			name = AppDelegate;
 			sourceTree = "<group>";
 		};
-		81F5F0281D45A15A00A65198 /* BaseViewController */ = {
+		81F5F0281D45A15A00A65198 /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
 				81F5F05C1D45B0E700A65198 /* header */,
 				81F5F04C1D45A60100A65198 /* View */,
 				81F5F04B1D45A5F800A65198 /* Model */,
 				81F5F04A1D45A5AF00A65198 /* VM */,
-				818545A01D42231500FFA8B2 /* BaseViewController.h */,
-				818545A11D42231500FFA8B2 /* BaseViewController.m */,
+				818545A01D42231500FFA8B2 /* RootViewController.h */,
+				818545A11D42231500FFA8B2 /* RootViewController.m */,
 			);
-			name = BaseViewController;
+			name = RootViewController;
 			sourceTree = "<group>";
 		};
 		81F5F0291D45A16900A65198 /* Stroyboard */ = {
@@ -594,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8140ED1F1D49D1AC009D369F /* BaseHeader.h in Sources */,
+				8106F4B61D4B51A8002AE161 /* BaseViewController.m in Sources */,
 				8140ED1E1D49D1A2009D369F /* BasicHeader.h in Sources */,
 				81F5F0631D4602CE00A65198 /* PGQ_SingViewController.m in Sources */,
 				81F5F0421D45A29A00A65198 /* UIView+pgqViewExtension.m in Sources */,
@@ -605,7 +619,7 @@
 				81F5F0491D45A5AB00A65198 /* BaseViewModel.m in Sources */,
 				81F5F0411D45A29A00A65198 /* UIImage+pgqImageExtension.m in Sources */,
 				8188F9361D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m in Sources */,
-				818545A21D42231500FFA8B2 /* BaseViewController.m in Sources */,
+				818545A21D42231500FFA8B2 /* RootViewController.m in Sources */,
 				8185459F1D42231500FFA8B2 /* AppDelegate.m in Sources */,
 				81F5F0531D45A79B00A65198 /* PGQ_BaseTopView.m in Sources */,
 				81F5F04F1D45A64B00A65198 /* PGQ_ScrollModel.m in Sources */,

@@ -10,7 +10,7 @@
 #import "BasicHeader.h"
 @interface AppDelegate ()
 
-@property (nonatomic,strong) BaseViewController * base ;
+@property (nonatomic,strong) RootViewController * base ;
 
 @end
 
@@ -30,7 +30,7 @@ static NSString * const IS_FIRST_START = @"isFirstStart";
         self.window.rootViewController = navigation;
     }
     else{
-        BaseViewController * base = [[BaseViewController alloc] init];
+        RootViewController * base = [[RootViewController alloc] init];
         PLNavigationViewController * navigation = [[PLNavigationViewController alloc]initWithRootViewController:base];
         self.base = base;
         self.window.rootViewController = navigation;

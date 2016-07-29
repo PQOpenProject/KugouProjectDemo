@@ -10,7 +10,7 @@
 #define BasicHeader_h
 
 //viwecontroller
-#import "BaseViewController.h"
+#import "RootViewController.h"
 #import "UIControl+PQControlExtension.h"
 #import "UIImage+pgqImageExtension.h"
 #import "IntroduceViewController.h"
