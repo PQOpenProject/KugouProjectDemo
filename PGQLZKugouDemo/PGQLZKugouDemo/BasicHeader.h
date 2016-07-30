@@ -17,7 +17,9 @@
 //Listen
 #import "ListenViewController.h"
 //唱
-#import "PGQ_SingViewController.h"
+#import "SingViewController.h"
+//kan
+#import "WatchViewController.h"
 
 //navigationController
 #import "PLNavigationViewController.h"

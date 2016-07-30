@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8106F4B61D4B51A8002AE161 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106F4B51D4B51A8002AE161 /* BaseViewController.m */; };
+		8106F4B91D4B6078002AE161 /* WatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106F4B81D4B6078002AE161 /* WatchViewController.m */; };
 		8140ED1D1D49B442009D369F /* UIScrollView+PQScrollExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140ED1C1D49B442009D369F /* UIScrollView+PQScrollExtension.m */; };
 		8140ED1E1D49D1A2009D369F /* BasicHeader.h in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F0321D45A26300A65198 /* BasicHeader.h */; };
 		8140ED1F1D49D1AC009D369F /* BaseHeader.h in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F05D1D45B0FA00A65198 /* BaseHeader.h */; };
@@ -20,6 +21,8 @@
 		818545B51D42231500FFA8B2 /* PGQLZKugouDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 818545B41D42231500FFA8B2 /* PGQLZKugouDemoTests.m */; };
 		818545C01D42231500FFA8B2 /* PGQLZKugouDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 818545BF1D42231500FFA8B2 /* PGQLZKugouDemoUITests.m */; };
 		8188F9361D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188F9351D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m */; };
+		81F397461D4C86CE00474D18 /* SingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F397451D4C86CE00474D18 /* SingViewController.m */; };
+		81F397481D4C86ED00474D18 /* SingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F397471D4C86ED00474D18 /* SingStoryboard.storyboard */; };
 		81F5F0351D45A27000A65198 /* IntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F0341D45A27000A65198 /* IntroduceViewController.m */; };
 		81F5F0391D45A29100A65198 /* PLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F0381D45A29100A65198 /* PLNavigationViewController.m */; };
 		81F5F0401D45A29A00A65198 /* UIControl+PQControlExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F03B1D45A29A00A65198 /* UIControl+PQControlExtension.m */; };
@@ -32,8 +35,6 @@
 		81F5F0571D45A81D00A65198 /* PGQ_BaseBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F0561D45A81D00A65198 /* PGQ_BaseBottomView.m */; };
 		81F5F05B1D45A88A00A65198 /* PGQ_BaseCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F05A1D45A88A00A65198 /* PGQ_BaseCenterView.m */; };
 		81F5F05F1D45C06500A65198 /* PGQ_BaseBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81F5F05E1D45C06500A65198 /* PGQ_BaseBottomView.xib */; };
-		81F5F0631D4602CE00A65198 /* PGQ_SingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F0611D4602CE00A65198 /* PGQ_SingViewController.m */; };
-		81F5F0641D4602CE00A65198 /* PGQ_SingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81F5F0621D4602CE00A65198 /* PGQ_SingViewController.xib */; };
 		D6425782056D8E7FB49D4AB7 /* libPods-PGQLZKugouDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 753492DADBD2BCAE33AA963E /* libPods-PGQLZKugouDemo.a */; };
 		EDACACFA1D49EF650053530B /* ListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDACACF91D49EF650053530B /* ListenViewController.m */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,8 @@
 		753492DADBD2BCAE33AA963E /* libPods-PGQLZKugouDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PGQLZKugouDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8106F4B41D4B51A8002AE161 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		8106F4B51D4B51A8002AE161 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8106F4B71D4B6078002AE161 /* WatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchViewController.h; sourceTree = "<group>"; };
+		8106F4B81D4B6078002AE161 /* WatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchViewController.m; sourceTree = "<group>"; };
 		8140ED1B1D49B442009D369F /* UIScrollView+PQScrollExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+PQScrollExtension.h"; sourceTree = "<group>"; };
 		8140ED1C1D49B442009D369F /* UIScrollView+PQScrollExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+PQScrollExtension.m"; sourceTree = "<group>"; };
 		818545971D42231500FFA8B2 /* PGQLZKugouDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PGQLZKugouDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +83,9 @@
 		818545C11D42231500FFA8B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8188F9341D4A09E1001A1E75 /* UIAlertController+PQ_alertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+PQ_alertView.h"; sourceTree = "<group>"; };
 		8188F9351D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+PQ_alertView.m"; sourceTree = "<group>"; };
+		81F397441D4C86CE00474D18 /* SingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingViewController.h; sourceTree = "<group>"; };
+		81F397451D4C86CE00474D18 /* SingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingViewController.m; sourceTree = "<group>"; };
+		81F397471D4C86ED00474D18 /* SingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SingStoryboard.storyboard; sourceTree = "<group>"; };
 		81F5F0321D45A26300A65198 /* BasicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicHeader.h; sourceTree = "<group>"; };
 		81F5F0331D45A27000A65198 /* IntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroduceViewController.h; sourceTree = "<group>"; };
 		81F5F0341D45A27000A65198 /* IntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroduceViewController.m; sourceTree = "<group>"; };
@@ -104,9 +110,6 @@
 		81F5F05A1D45A88A00A65198 /* PGQ_BaseCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGQ_BaseCenterView.m; sourceTree = "<group>"; };
 		81F5F05D1D45B0FA00A65198 /* BaseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHeader.h; sourceTree = "<group>"; };
 		81F5F05E1D45C06500A65198 /* PGQ_BaseBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PGQ_BaseBottomView.xib; sourceTree = "<group>"; };
-		81F5F0601D4602CE00A65198 /* PGQ_SingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGQ_SingViewController.h; sourceTree = "<group>"; };
-		81F5F0611D4602CE00A65198 /* PGQ_SingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGQ_SingViewController.m; sourceTree = "<group>"; };
-		81F5F0621D4602CE00A65198 /* PGQ_SingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PGQ_SingViewController.xib; sourceTree = "<group>"; };
 		EDACACF81D49EF650053530B /* ListenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenViewController.h; sourceTree = "<group>"; };
 		EDACACF91D49EF650053530B /* ListenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenViewController.m; sourceTree = "<group>"; };
 		F48CAF81A18C9FBBD374F1F9 /* Pods-PGQLZKugouDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGQLZKugouDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PGQLZKugouDemo/Pods-PGQLZKugouDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -277,6 +280,8 @@
 		81F5F02C1D45A1EF00A65198 /* 看 */ = {
 			isa = PBXGroup;
 			children = (
+				8106F4B71D4B6078002AE161 /* WatchViewController.h */,
+				8106F4B81D4B6078002AE161 /* WatchViewController.m */,
 			);
 			name = "看";
 			sourceTree = "<group>";
@@ -284,9 +289,9 @@
 		81F5F02D1D45A1F600A65198 /* 唱 */ = {
 			isa = PBXGroup;
 			children = (
-				81F5F0601D4602CE00A65198 /* PGQ_SingViewController.h */,
-				81F5F0611D4602CE00A65198 /* PGQ_SingViewController.m */,
-				81F5F0621D4602CE00A65198 /* PGQ_SingViewController.xib */,
+				81F397441D4C86CE00474D18 /* SingViewController.h */,
+				81F397451D4C86CE00474D18 /* SingViewController.m */,
+				81F397471D4C86ED00474D18 /* SingStoryboard.storyboard */,
 			);
 			name = "唱";
 			sourceTree = "<group>";
@@ -530,10 +535,10 @@
 			files = (
 				818545AA1D42231500FFA8B2 /* LaunchScreen.storyboard in Resources */,
 				81F5F05F1D45C06500A65198 /* PGQ_BaseBottomView.xib in Resources */,
-				81F5F0641D4602CE00A65198 /* PGQ_SingViewController.xib in Resources */,
 				818545A71D42231500FFA8B2 /* Assets.xcassets in Resources */,
 				818545A51D42231500FFA8B2 /* Main.storyboard in Resources */,
 				81F5F0461D45A36600A65198 /* IntroducePlist.plist in Resources */,
+				81F397481D4C86ED00474D18 /* SingStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,8 +613,8 @@
 			files = (
 				8140ED1F1D49D1AC009D369F /* BaseHeader.h in Sources */,
 				8106F4B61D4B51A8002AE161 /* BaseViewController.m in Sources */,
+				8106F4B91D4B6078002AE161 /* WatchViewController.m in Sources */,
 				8140ED1E1D49D1A2009D369F /* BasicHeader.h in Sources */,
-				81F5F0631D4602CE00A65198 /* PGQ_SingViewController.m in Sources */,
 				81F5F0421D45A29A00A65198 /* UIView+pgqViewExtension.m in Sources */,
 				81F5F0401D45A29A00A65198 /* UIControl+PQControlExtension.m in Sources */,
 				81F5F05B1D45A88A00A65198 /* PGQ_BaseCenterView.m in Sources */,
@@ -625,6 +630,7 @@
 				81F5F04F1D45A64B00A65198 /* PGQ_ScrollModel.m in Sources */,
 				81F5F0571D45A81D00A65198 /* PGQ_BaseBottomView.m in Sources */,
 				8185459C1D42231500FFA8B2 /* main.m in Sources */,
+				81F397461D4C86CE00474D18 /* SingViewController.m in Sources */,
 				8140ED1D1D49B442009D369F /* UIScrollView+PQScrollExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
