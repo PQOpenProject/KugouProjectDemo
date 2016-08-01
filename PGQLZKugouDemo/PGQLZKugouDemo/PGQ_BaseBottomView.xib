@@ -16,15 +16,15 @@
                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aoz-s3-RJg">
                     <rect key="frame" x="14" y="-20" width="60" height="60"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="kuqun_gchat_icon_default" translatesAutoresizingMaskIntoConstraints="NO" id="0We-Sg-Buw">
-                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fx_kglive_viewer_default" translatesAutoresizingMaskIntoConstraints="NO" id="0We-Sg-Buw">
+                            <rect key="frame" x="0.0" y="8" width="60" height="60"/>
                         </imageView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="0We-Sg-Buw" firstAttribute="top" secondItem="Aoz-s3-RJg" secondAttribute="top" id="2aY-UK-40G"/>
+                        <constraint firstItem="0We-Sg-Buw" firstAttribute="top" secondItem="Aoz-s3-RJg" secondAttribute="top" constant="8" id="2aY-UK-40G"/>
                         <constraint firstItem="0We-Sg-Buw" firstAttribute="leading" secondItem="Aoz-s3-RJg" secondAttribute="leading" id="8iE-Sx-OFh"/>
                         <constraint firstAttribute="trailing" secondItem="0We-Sg-Buw" secondAttribute="trailing" id="FVy-rf-kIf"/>
-                        <constraint firstAttribute="bottom" secondItem="0We-Sg-Buw" secondAttribute="bottom" id="TAo-B5-lVk"/>
+                        <constraint firstAttribute="bottom" secondItem="0We-Sg-Buw" secondAttribute="bottom" constant="-8" id="TAo-B5-lVk"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ddm-99-aqX">
@@ -133,7 +133,7 @@
         </view>
     </objects>
     <resources>
-        <image name="kuqun_gchat_icon_default" width="75" height="75"/>
+        <image name="fx_kglive_viewer_default" width="50" height="50"/>
         <image name="kuqun_gchat_next_normal" width="20" height="20"/>
         <image name="kuqun_gchat_play_normal" width="20" height="20"/>
         <image name="kuqun_gchat_songlist_normal" width="20" height="20"/>

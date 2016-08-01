@@ -10,6 +10,6 @@
 
 @interface BaseViewController : UIViewController
 
-- (void)updateForImage;
+- (void)updateForImageWithName:(NSString *)imgName;
 
 @end

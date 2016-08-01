@@ -7,19 +7,23 @@
 //
 
 #import "BaseViewController.h"
-
+#import "BasicHeader.h"
+#import "UIImage+ImageEffects.h"
 @interface BaseViewController ()
-
+@property (nonatomic,strong) UIImageView * backgroundIMG;
 @end
 
 @implementation BaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)updateForImage{
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"hyjm3"]];
+- (void)updateForImageWithName:(NSString *)imgName{
+    self.backgroundIMG = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, PL_SRCEEN_WIDTH, 244)];
+    self.backgroundIMG.image = [[UIImage imageNamed:imgName] blurImageAtFrame:CGRectMake(0, 84, PL_SRCEEN_WIDTH, 244)];
+    [self.view addSubview:self.backgroundIMG];
     
 }
 

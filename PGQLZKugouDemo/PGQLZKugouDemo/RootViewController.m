@@ -68,12 +68,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor orangeColor];
     //初始化UI
     [self initUI];
     //处理事件
     [self event];
-
     
 }
 
@@ -94,7 +92,7 @@
 
 - (void)initUI{
     //增加背景
-    [self updateForImage];
+    [self updateForImageWithName:@"theme_default.jpg"];
     [self.view addSubview:self.topView];
     UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"SingStoryboard" bundle:nil];
     self.singVC = [storyBoard instantiateViewControllerWithIdentifier:@"singVC"];

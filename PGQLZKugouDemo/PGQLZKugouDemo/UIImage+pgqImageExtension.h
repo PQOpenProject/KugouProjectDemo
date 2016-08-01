@@ -60,4 +60,6 @@ typedef void(^PrintScreenBlock)(BOOL isSave);
  *  @param VC
  */
 + (void)pgq_printScreenWithCurrentClass:(UIViewController * _Nonnull)VC resultBlock:(PrintScreenBlock _Nullable)block;
+
+- (UIImage * _Nullable)blurryWithBlurLevel:(CGFloat)blur ;
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810679DC1D4F0942001C2ECE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810679DB1D4F0942001C2ECE /* Accelerate.framework */; };
+		810679DF1D4F0C06001C2ECE /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 810679DE1D4F0C06001C2ECE /* UIImage+ImageEffects.m */; };
 		8106F4B61D4B51A8002AE161 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106F4B51D4B51A8002AE161 /* BaseViewController.m */; };
 		8106F4B91D4B6078002AE161 /* WatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106F4B81D4B6078002AE161 /* WatchViewController.m */; };
 		8140ED1D1D49B442009D369F /* UIScrollView+PQScrollExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140ED1C1D49B442009D369F /* UIScrollView+PQScrollExtension.m */; };
@@ -60,6 +62,9 @@
 /* Begin PBXFileReference section */
 		3366DF3804308D54B322D26B /* Pods-PGQLZKugouDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGQLZKugouDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PGQLZKugouDemo/Pods-PGQLZKugouDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		753492DADBD2BCAE33AA963E /* libPods-PGQLZKugouDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PGQLZKugouDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		810679DB1D4F0942001C2ECE /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		810679DD1D4F0C06001C2ECE /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		810679DE1D4F0C06001C2ECE /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		8106F4B41D4B51A8002AE161 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		8106F4B51D4B51A8002AE161 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		8106F4B71D4B6078002AE161 /* WatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchViewController.h; sourceTree = "<group>"; };
@@ -123,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810679DC1D4F0942001C2ECE /* Accelerate.framework in Frameworks */,
 				D6425782056D8E7FB49D4AB7 /* libPods-PGQLZKugouDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +153,7 @@
 		2B5A8E674B5FB2A9A1412A48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				810679DB1D4F0942001C2ECE /* Accelerate.framework */,
 				753492DADBD2BCAE33AA963E /* libPods-PGQLZKugouDemo.a */,
 			);
 			name = Frameworks;
@@ -336,6 +343,8 @@
 		81F5F0311D45A22700A65198 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				810679DD1D4F0C06001C2ECE /* UIImage+ImageEffects.h */,
+				810679DE1D4F0C06001C2ECE /* UIImage+ImageEffects.m */,
 				8188F9341D4A09E1001A1E75 /* UIAlertController+PQ_alertView.h */,
 				8188F9351D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m */,
 				81F5F03A1D45A29A00A65198 /* UIControl+PQControlExtension.h */,
@@ -639,6 +648,7 @@
 				81F5F0411D45A29A00A65198 /* UIImage+pgqImageExtension.m in Sources */,
 				8188F9361D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m in Sources */,
 				818545A21D42231500FFA8B2 /* RootViewController.m in Sources */,
+				810679DF1D4F0C06001C2ECE /* UIImage+ImageEffects.m in Sources */,
 				8185459F1D42231500FFA8B2 /* AppDelegate.m in Sources */,
 				81F5F0531D45A79B00A65198 /* PGQ_BaseTopView.m in Sources */,
 				81F5F04F1D45A64B00A65198 /* PGQ_ScrollModel.m in Sources */,
