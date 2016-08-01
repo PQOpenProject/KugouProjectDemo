@@ -20,5 +20,10 @@
     [self.view addSubview:view];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"%@ - 接收到touce！！！",self);
+}
+
+
 
 @end
