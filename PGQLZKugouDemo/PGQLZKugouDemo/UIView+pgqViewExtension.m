@@ -104,4 +104,12 @@
 {
     return self.frame.origin;
 }
+
+- (void)frostedglassStyle:(UIBlurEffectStyle)style{
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:style];
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    effectView.frame = self.bounds;
+    [self addSubview:effectView];
+}
+
 @end

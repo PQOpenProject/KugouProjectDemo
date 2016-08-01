@@ -1,12 +1,13 @@
 //
-//  PGQ_SingViewController.h
+//  WatchViewController.h
 //  PGQLZKugouDemo
 //
-//  Created by ios on 16/7/25.
+//  Created by ios on 16/7/29.
 //  Copyright © 2016年 PL. All rights reserved.
 //
 
 #import "BaseViewController.h"
-@interface PGQ_SingViewController : BaseViewController
+
+@interface WatchViewController : BaseViewController
 
 @end

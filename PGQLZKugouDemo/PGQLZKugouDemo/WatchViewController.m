@@ -1,26 +1,30 @@
 //
-//  BaseViewController.m
+//  WatchViewController.m
 //  PGQLZKugouDemo
 //
 //  Created by ios on 16/7/29.
 //  Copyright © 2016年 PL. All rights reserved.
 //
 
-#import "BaseViewController.h"
-
-@interface BaseViewController ()
+#import "WatchViewController.h"
+#import "BasicHeader.h"
+@interface WatchViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation WatchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void)updateForImage{
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"hyjm3"]];
     
+    UIView * view = [[UIView alloc]initWithFrame:CGRectMake(50, 100, 300, 300)];
+    view.backgroundColor = [UIColor orangeColor];
+    view.alpha = 0.8;
+    
+    //毛玻璃效果
+    [self.view frostedglassStyle:UIBlurEffectStyleDark];
+    self.view.alpha = 0.98;
+//    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {

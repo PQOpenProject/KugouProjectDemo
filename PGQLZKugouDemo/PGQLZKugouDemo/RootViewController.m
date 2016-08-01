@@ -26,8 +26,8 @@
  *  ViewModel
  */
 @property (nonatomic,strong) BaseViewModel * baseVM;
-
-@property (nonatomic,strong) PGQ_SingViewController * singVC;
+@property (nonatomic,strong) SingViewController * singVC;
+@property (nonatomic,strong) WatchViewController * watchVC;
 
 @property (nonatomic,strong) ListenViewController *listenVC;
 
@@ -80,13 +80,19 @@
     [self.baseVM.scrollCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
         [self.topView updateUserSelectedWithIndex:[x integerValue]];
         [self.centerView updateScrollViewContentOffSetWith:[x integerValue]];
+        
+        if ([x integerValue] == 2) {
+            [self.singVC startTopScrollViewTimer];
+        }else{
+            [self.singVC closeTopScrollViewTimer];
+        }
+        
     }];
 }
 
 - (void)initUI{
-    
+    //增加背景
     [self updateForImage];
-    
     [self.view addSubview:self.topView];
     
     
@@ -107,10 +113,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"%@ - 接收到touce",self);
 }
 
 

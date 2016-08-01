@@ -17,7 +17,9 @@
 //Listen
 #import "ListenViewController.h"
 //唱
-#import "PGQ_SingViewController.h"
+#import "SingViewController.h"
+//kan
+#import "WatchViewController.h"
 
 //navigationController
 #import "PLNavigationViewController.h"
@@ -32,7 +34,12 @@
 
 //定义一个宏 输入 名字和类别 得到路径
 #define PATH_FORBUNDLE(name,type) [[NSBundle mainBundle] pathForResource:name ofType:type]
-#define RANDOM_COLOR [UIColor colorWithRed:random()%255/255.0 green:random()%255/255.0 blue:random()%255/255.0 alpha:1 * random()%100/100.0]
+//加载一个nib
+#define PQTH_NIBFORBUNDLE(name,owner) [[NSBundle mainBundle]loadNibNamed:name owner:owner options:nil]
+
+
+//随机颜色
+#define RANDOM_COLOR [UIColor colorWithRed:random()%255/255.0 green:random()%255/255.0 blue:random()%255/255.0 alpha:1 ]
 //屏幕宽高
 #define PL_SRCEEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define PL_SRCEEN_HEIGHT [UIScreen mainScreen].bounds.size.height
