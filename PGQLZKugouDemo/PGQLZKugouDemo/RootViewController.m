@@ -29,6 +29,8 @@
 
 @property (nonatomic,strong) PGQ_SingViewController * singVC;
 
+@property (nonatomic,strong) ListenViewController *listenVC;
+
 @end
 
 @implementation RootViewController
@@ -92,9 +94,9 @@
     
     UIViewController * controller2 = [[UIViewController alloc] init];
     
-    ListenViewController *listenVC = [[ListenViewController alloc]init];
+   self.listenVC= [[ListenViewController alloc]init];
     
-    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[listenVC.view,controller2.view,self.singVC.view] PageBlock:^(NSInteger pageIndex) {
+    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[self.listenVC.view,controller2.view,self.singVC.view] PageBlock:^(NSInteger pageIndex) {
         NSLog(@"scroll - pageindex %ld",pageIndex);
         [self.baseVM.scrollCommand execute:@(pageIndex)];
     }];
