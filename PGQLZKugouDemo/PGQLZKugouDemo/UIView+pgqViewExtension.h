@@ -17,4 +17,7 @@
 @property (nonatomic, assign) CGFloat height;
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGPoint origin;
+
+//添加毛玻璃效果
+- (void)frostedglassStyle:(UIBlurEffectStyle)style;
 @end

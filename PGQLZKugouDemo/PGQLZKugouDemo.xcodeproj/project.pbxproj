@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810679DA1D4EEA95001C2ECE /* MaoboliView.m in Sources */ = {isa = PBXBuildFile; fileRef = 810679D91D4EEA95001C2ECE /* MaoboliView.m */; };
 		8106F4B61D4B51A8002AE161 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106F4B51D4B51A8002AE161 /* BaseViewController.m */; };
 		8106F4B91D4B6078002AE161 /* WatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106F4B81D4B6078002AE161 /* WatchViewController.m */; };
 		8140ED1D1D49B442009D369F /* UIScrollView+PQScrollExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140ED1C1D49B442009D369F /* UIScrollView+PQScrollExtension.m */; };
@@ -23,6 +24,7 @@
 		8188F9361D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188F9351D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m */; };
 		81F397461D4C86CE00474D18 /* SingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F397451D4C86CE00474D18 /* SingViewController.m */; };
 		81F397481D4C86ED00474D18 /* SingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F397471D4C86ED00474D18 /* SingStoryboard.storyboard */; };
+		81F3974B1D4C971400474D18 /* PQ_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F3974A1D4C971400474D18 /* PQ_TimerManager.m */; };
 		81F5F0351D45A27000A65198 /* IntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F0341D45A27000A65198 /* IntroduceViewController.m */; };
 		81F5F0391D45A29100A65198 /* PLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F0381D45A29100A65198 /* PLNavigationViewController.m */; };
 		81F5F0401D45A29A00A65198 /* UIControl+PQControlExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5F03B1D45A29A00A65198 /* UIControl+PQControlExtension.m */; };
@@ -59,6 +61,8 @@
 /* Begin PBXFileReference section */
 		3366DF3804308D54B322D26B /* Pods-PGQLZKugouDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGQLZKugouDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PGQLZKugouDemo/Pods-PGQLZKugouDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		753492DADBD2BCAE33AA963E /* libPods-PGQLZKugouDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PGQLZKugouDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		810679D81D4EEA95001C2ECE /* MaoboliView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaoboliView.h; path = PGQLZKugouDemo/MaoboliView.h; sourceTree = "<group>"; };
+		810679D91D4EEA95001C2ECE /* MaoboliView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaoboliView.m; path = PGQLZKugouDemo/MaoboliView.m; sourceTree = "<group>"; };
 		8106F4B41D4B51A8002AE161 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		8106F4B51D4B51A8002AE161 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		8106F4B71D4B6078002AE161 /* WatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchViewController.h; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 		81F397441D4C86CE00474D18 /* SingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingViewController.h; sourceTree = "<group>"; };
 		81F397451D4C86CE00474D18 /* SingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingViewController.m; sourceTree = "<group>"; };
 		81F397471D4C86ED00474D18 /* SingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SingStoryboard.storyboard; sourceTree = "<group>"; };
+		81F397491D4C971400474D18 /* PQ_TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQ_TimerManager.h; sourceTree = "<group>"; };
+		81F3974A1D4C971400474D18 /* PQ_TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQ_TimerManager.m; sourceTree = "<group>"; };
 		81F5F0321D45A26300A65198 /* BasicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicHeader.h; sourceTree = "<group>"; };
 		81F5F0331D45A27000A65198 /* IntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroduceViewController.h; sourceTree = "<group>"; };
 		81F5F0341D45A27000A65198 /* IntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroduceViewController.m; sourceTree = "<group>"; };
@@ -161,6 +167,8 @@
 		8185458E1D42231400FFA8B2 = {
 			isa = PBXGroup;
 			children = (
+				810679D81D4EEA95001C2ECE /* MaoboliView.h */,
+				810679D91D4EEA95001C2ECE /* MaoboliView.m */,
 				818545991D42231500FFA8B2 /* PGQLZKugouDemo */,
 				818545B31D42231500FFA8B2 /* PGQLZKugouDemoTests */,
 				818545BE1D42231500FFA8B2 /* PGQLZKugouDemoUITests */,
@@ -183,6 +191,7 @@
 		818545991D42231500FFA8B2 /* PGQLZKugouDemo */ = {
 			isa = PBXGroup;
 			children = (
+				81F3974C1D4C972400474D18 /* 类的封装 */,
 				81F5F0431D45A2A200A65198 /* 数据库 */,
 				81F5F0301D45A21800A65198 /* 侧滑 */,
 				81F5F02F1D45A20500A65198 /* 头文件 */,
@@ -227,6 +236,15 @@
 				818545C11D42231500FFA8B2 /* Info.plist */,
 			);
 			path = PGQLZKugouDemoUITests;
+			sourceTree = "<group>";
+		};
+		81F3974C1D4C972400474D18 /* 类的封装 */ = {
+			isa = PBXGroup;
+			children = (
+				81F397491D4C971400474D18 /* PQ_TimerManager.h */,
+				81F3974A1D4C971400474D18 /* PQ_TimerManager.m */,
+			);
+			name = "类的封装";
 			sourceTree = "<group>";
 		};
 		81F5F0271D45A14A00A65198 /* AppDelegate */ = {
@@ -621,10 +639,12 @@
 				81F5F0351D45A27000A65198 /* IntroduceViewController.m in Sources */,
 				81F5F0391D45A29100A65198 /* PLNavigationViewController.m in Sources */,
 				EDACACFA1D49EF650053530B /* ListenViewController.m in Sources */,
+				81F3974B1D4C971400474D18 /* PQ_TimerManager.m in Sources */,
 				81F5F0491D45A5AB00A65198 /* BaseViewModel.m in Sources */,
 				81F5F0411D45A29A00A65198 /* UIImage+pgqImageExtension.m in Sources */,
 				8188F9361D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m in Sources */,
 				818545A21D42231500FFA8B2 /* RootViewController.m in Sources */,
+				810679DA1D4EEA95001C2ECE /* MaoboliView.m in Sources */,
 				8185459F1D42231500FFA8B2 /* AppDelegate.m in Sources */,
 				81F5F0531D45A79B00A65198 /* PGQ_BaseTopView.m in Sources */,
 				81F5F04F1D45A64B00A65198 /* PGQ_ScrollModel.m in Sources */,

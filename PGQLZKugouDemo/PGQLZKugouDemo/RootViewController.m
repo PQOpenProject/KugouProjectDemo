@@ -78,6 +78,13 @@
     [self.baseVM.scrollCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
         [self.topView updateUserSelectedWithIndex:[x integerValue]];
         [self.centerView updateScrollViewContentOffSetWith:[x integerValue]];
+        
+        if ([x integerValue] == 2) {
+            [self.singVC startTopScrollViewTimer];
+        }else{
+            [self.singVC closeTopScrollViewTimer];
+        }
+        
     }];
 }
 
@@ -101,10 +108,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"%@ - 接收到touce",self);
 }
 
 

@@ -20,6 +20,7 @@
 
 - (void)updateForImage{
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"hyjm3"]];
+    
 }
 
 - (void)didReceiveMemoryWarning {

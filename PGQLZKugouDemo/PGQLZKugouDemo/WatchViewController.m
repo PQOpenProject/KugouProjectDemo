@@ -7,7 +7,7 @@
 //
 
 #import "WatchViewController.h"
-
+#import "BasicHeader.h"
 @interface WatchViewController ()
 
 @end
@@ -17,10 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIView * view = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 300, 300)];
+    UIView * view = [[UIView alloc]initWithFrame:CGRectMake(50, 100, 300, 300)];
     view.backgroundColor = [UIColor orangeColor];
     view.alpha = 0.8;
-    [self.view addSubview:view];
+    
+    //毛玻璃效果
+    [self.view frostedglassStyle:UIBlurEffectStyleDark];
+    self.view.alpha = 0.98;
+//    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {

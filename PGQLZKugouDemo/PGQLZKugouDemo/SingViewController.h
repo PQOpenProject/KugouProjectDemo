@@ -10,4 +10,7 @@
 
 @interface SingViewController : UIViewController
 
+- (void)startTopScrollViewTimer;
+- (void)closeTopScrollViewTimer;
+
 @end
