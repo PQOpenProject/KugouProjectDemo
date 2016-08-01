@@ -29,6 +29,8 @@
 @property (nonatomic,strong) SingViewController * singVC;
 @property (nonatomic,strong) WatchViewController * watchVC;
 
+@property (nonatomic,strong) PGQ_SingViewController * singVC;
+
 @property (nonatomic,strong) ListenViewController *listenVC;
 
 @end
@@ -94,15 +96,12 @@
     //增加背景
     [self updateForImage];
     [self.view addSubview:self.topView];
+    UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"SingStoryboard" bundle:nil];
+    self.singVC = [storyBoard instantiateViewControllerWithIdentifier:@"singVC"];
+    self.watchVC = [[WatchViewController alloc]init];
+    ListenViewController *listenVC = [[ListenViewController alloc]init];
     
-    
-     self.singVC = [[PGQ_SingViewController alloc] initWithNibName:@"PGQ_SingViewController" bundle:nil];
-    
-    UIViewController * controller2 = [[UIViewController alloc] init];
-    
-   self.listenVC= [[ListenViewController alloc]init];
-    
-    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[self.listenVC.view,controller2.view,self.singVC.view] PageBlock:^(NSInteger pageIndex) {
+    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[listenVC.view,self.watchVC.view,self.singVC.view] PageBlock:^(NSInteger pageIndex) {
         NSLog(@"scroll - pageindex %ld",pageIndex);
         [self.baseVM.scrollCommand execute:@(pageIndex)];
     }];
