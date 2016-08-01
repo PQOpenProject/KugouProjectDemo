@@ -24,8 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setUpForTopScrollView];
-    [self setUpForPageControl];
+    
     
     //建立一个定时器 轮播
     [self createTimer];
@@ -41,6 +40,12 @@
 
 - (void)viewDidLayoutSubviews{
     self.pageControl.centerX = self.topScrollView.centerX;
+    NSLog(@"scrollView top - %f",self.topScrollView.width);
+    self.topScrollView.width = PL_SRCEEN_WIDTH;
+    self.centerView.width = PL_SRCEEN_WIDTH;
+    self.bottomView.width = PL_SRCEEN_WIDTH;
+    [self setUpForTopScrollView];
+    [self setUpForPageControl];
 }
 
 
@@ -77,7 +82,7 @@
     pageControl.numberOfPages = 5;
     pageControl.currentPage = 0;
     [self.view addSubview:self.pageControl];
-    pageControl.y = CGRectGetMaxY(self.topScrollView.frame)-20;
+    pageControl.y = CGRectGetMinY(self.topScrollView.frame)-20;
 }
 
 - (void)setUpForTopScrollView{

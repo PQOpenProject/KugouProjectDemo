@@ -20,11 +20,8 @@
     UIView * view = [[UIView alloc]initWithFrame:CGRectMake(50, 100, 300, 300)];
     view.backgroundColor = [UIColor orangeColor];
     view.alpha = 0.8;
-    
-    //毛玻璃效果
-    [self.view frostedglassStyle:UIBlurEffectStyleDark];
-    self.view.alpha = 0.98;
-//    [self.view addSubview:view];
+
+    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {
