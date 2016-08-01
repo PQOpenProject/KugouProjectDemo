@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		810679DA1D4EEA95001C2ECE /* MaoboliView.m in Sources */ = {isa = PBXBuildFile; fileRef = 810679D91D4EEA95001C2ECE /* MaoboliView.m */; };
 		8106F4B61D4B51A8002AE161 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106F4B51D4B51A8002AE161 /* BaseViewController.m */; };
 		8106F4B91D4B6078002AE161 /* WatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106F4B81D4B6078002AE161 /* WatchViewController.m */; };
 		8140ED1D1D49B442009D369F /* UIScrollView+PQScrollExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140ED1C1D49B442009D369F /* UIScrollView+PQScrollExtension.m */; };
@@ -61,8 +60,6 @@
 /* Begin PBXFileReference section */
 		3366DF3804308D54B322D26B /* Pods-PGQLZKugouDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGQLZKugouDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PGQLZKugouDemo/Pods-PGQLZKugouDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		753492DADBD2BCAE33AA963E /* libPods-PGQLZKugouDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PGQLZKugouDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		810679D81D4EEA95001C2ECE /* MaoboliView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaoboliView.h; path = PGQLZKugouDemo/MaoboliView.h; sourceTree = "<group>"; };
-		810679D91D4EEA95001C2ECE /* MaoboliView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaoboliView.m; path = PGQLZKugouDemo/MaoboliView.m; sourceTree = "<group>"; };
 		8106F4B41D4B51A8002AE161 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		8106F4B51D4B51A8002AE161 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		8106F4B71D4B6078002AE161 /* WatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchViewController.h; sourceTree = "<group>"; };
@@ -167,8 +164,6 @@
 		8185458E1D42231400FFA8B2 = {
 			isa = PBXGroup;
 			children = (
-				810679D81D4EEA95001C2ECE /* MaoboliView.h */,
-				810679D91D4EEA95001C2ECE /* MaoboliView.m */,
 				818545991D42231500FFA8B2 /* PGQLZKugouDemo */,
 				818545B31D42231500FFA8B2 /* PGQLZKugouDemoTests */,
 				818545BE1D42231500FFA8B2 /* PGQLZKugouDemoUITests */,
@@ -644,7 +639,6 @@
 				81F5F0411D45A29A00A65198 /* UIImage+pgqImageExtension.m in Sources */,
 				8188F9361D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m in Sources */,
 				818545A21D42231500FFA8B2 /* RootViewController.m in Sources */,
-				810679DA1D4EEA95001C2ECE /* MaoboliView.m in Sources */,
 				8185459F1D42231500FFA8B2 /* AppDelegate.m in Sources */,
 				81F5F0531D45A79B00A65198 /* PGQ_BaseTopView.m in Sources */,
 				81F5F04F1D45A64B00A65198 /* PGQ_ScrollModel.m in Sources */,
