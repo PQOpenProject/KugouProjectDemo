@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *topScrollView;
 @property (weak, nonatomic) IBOutlet UIView *centerView;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic) IBOutlet UIView *iWantSingView;
 @property (weak, nonatomic)  UIPageControl *pageControl;
 @property (nonatomic,strong) PQ_TimerManager *timerManager;;
 @end
@@ -25,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    [self setUpForPageControl];
     //建立一个定时器 轮播
     [self createTimer];
     
@@ -40,12 +41,14 @@
 
 - (void)viewDidLayoutSubviews{
     self.pageControl.centerX = self.topScrollView.centerX;
-    NSLog(@"scrollView top - %f",self.topScrollView.width);
     self.topScrollView.width = PL_SRCEEN_WIDTH;
     self.centerView.width = PL_SRCEEN_WIDTH;
     self.bottomView.width = PL_SRCEEN_WIDTH;
+    self.iWantSingView.clipsToBounds = YES;
+    self.iWantSingView.height = self.iWantSingView.width;
+    self.iWantSingView.layer.cornerRadius = self.iWantSingView.width/2.0;
+    self.iWantSingView.centerY = (self.centerView.height / 2);
     [self setUpForTopScrollView];
-    [self setUpForPageControl];
 }
 
 
@@ -82,7 +85,7 @@
     pageControl.numberOfPages = 5;
     pageControl.currentPage = 0;
     [self.view addSubview:self.pageControl];
-    pageControl.y = CGRectGetMinY(self.topScrollView.frame)-20;
+    pageControl.y = self.topScrollView.height - 20;
 }
 
 - (void)setUpForTopScrollView{
@@ -92,7 +95,6 @@
         view.height += 20;
         view.backgroundColor = RANDOM_COLOR;
         [self.topScrollView addSubview:view];
-        NSLog(@"width - %f height - %f y - %f",self.topScrollView.width,self.topScrollView.height,view.y);
     }
     self.topScrollView.contentSize = CGSizeMake(5 * PL_SRCEEN_WIDTH, 0);
     

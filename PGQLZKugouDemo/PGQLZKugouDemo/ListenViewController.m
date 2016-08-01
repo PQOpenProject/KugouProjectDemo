@@ -21,7 +21,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"%@ - 接收到touce！！！",self);
+//    NSLog(@"%@ - 接收到touce！！！",self);
 }
 
 

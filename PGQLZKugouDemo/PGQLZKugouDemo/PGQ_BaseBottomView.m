@@ -7,7 +7,7 @@
 //
 
 #import "PGQ_BaseBottomView.h"
-
+#import "UIView+pgqViewExtension.h"
 @interface PGQ_BaseBottomView ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
@@ -22,6 +22,14 @@
 @end
 
 @implementation PGQ_BaseBottomView
+
+- (void)awakeFromNib{
+//    self.iconImage.height = self.iconImage.width;
+    NSLog(@"%f %f",self.iconImage.width,self.iconImage.height);
+    self.iconImage.layer.cornerRadius = self.iconImage.width/2;
+    self.iconImage.clipsToBounds = YES;
+}
+
 + (instancetype)pgqBaseBottomView{
 
     NSBundle *bundle=[NSBundle mainBundle];

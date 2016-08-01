@@ -70,7 +70,6 @@
     [self initUI];
     //处理事件
     [self event];
-
     
 }
 
@@ -95,13 +94,13 @@
     [self.view addSubview:self.topView];
     
     
-     self.singVC = [[PGQ_SingViewController alloc] initWithNibName:@"PGQ_SingViewController" bundle:nil];
-    
-    UIViewController * controller2 = [[UIViewController alloc] init];
+    UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"SingStoryboard" bundle:nil];
+    self.singVC = [storyBoard instantiateViewControllerWithIdentifier:@"singVC"];
+    self.watchVC = [[WatchViewController alloc]init];
     
    self.listenVC= [[ListenViewController alloc]init];
     
-    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[self.listenVC.view,controller2.view,self.singVC.view] PageBlock:^(NSInteger pageIndex) {
+    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[self.listenVC.view,self.watchVC.view,self.singVC.view] PageBlock:^(NSInteger pageIndex) {
         NSLog(@"scroll - pageindex %ld",pageIndex);
         [self.baseVM.scrollCommand execute:@(pageIndex)];
     }];
