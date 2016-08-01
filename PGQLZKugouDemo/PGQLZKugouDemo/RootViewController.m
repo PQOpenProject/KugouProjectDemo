@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "BasicHeader.h"
 #import "BaseHeader.h"
+#import "SingHeader.h"
 @interface RootViewController ()
 /**
  *  顶部view
@@ -27,6 +28,7 @@
  */
 @property (nonatomic,strong) BaseViewModel * baseVM;
 @property (nonatomic,strong) SingViewController * singVC;
+@property (nonatomic,strong) SingTwoViewController * singVC2;
 @property (nonatomic,strong) WatchViewController * watchVC;
 
 @property (nonatomic,strong) ListenViewController *listenVC;
@@ -60,6 +62,7 @@
         _bottomView = [PGQ_BaseBottomView pgqBaseBottomView];
         _bottomView.width = PL_SRCEEN_WIDTH;
         _bottomView.y = self.view.bounds.size.height - 50;
+//        [_bottomView iconImage];
     }
     return _bottomView;
 }
@@ -80,9 +83,9 @@
         [self.centerView updateScrollViewContentOffSetWith:[x integerValue]];
         
         if ([x integerValue] == 2) {
-            [self.singVC startTopScrollViewTimer];
+            [self.singVC2 startTopScrollViewTimer];
         }else{
-            [self.singVC closeTopScrollViewTimer];
+            [self.singVC2 closeTopScrollViewTimer];
         }
         
     }];
@@ -95,12 +98,12 @@
     
     
     UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"SingStoryboard" bundle:nil];
-    self.singVC = [storyBoard instantiateViewControllerWithIdentifier:@"singVC"];
+    self.singVC2 = [storyBoard instantiateViewControllerWithIdentifier:@"singVC2"];
     self.watchVC = [[WatchViewController alloc]init];
     
    self.listenVC= [[ListenViewController alloc]init];
     
-    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[self.listenVC.view,self.watchVC.view,self.singVC.view] PageBlock:^(NSInteger pageIndex) {
+    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[self.listenVC.view,self.watchVC.view,self.singVC2.view] PageBlock:^(NSInteger pageIndex) {
         NSLog(@"scroll - pageindex %ld",pageIndex);
         [self.baseVM.scrollCommand execute:@(pageIndex)];
     }];

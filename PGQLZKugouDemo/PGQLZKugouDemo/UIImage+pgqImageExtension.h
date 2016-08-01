@@ -60,6 +60,21 @@ typedef void(^PrintScreenBlock)(BOOL isSave);
  *  @param VC
  */
 + (void)pgq_printScreenWithCurrentClass:(UIViewController * _Nonnull)VC resultBlock:(PrintScreenBlock _Nullable)block;
-
+/**
+ *  添加模糊效果
+ *
+ *  @param blur
+ *
+ *  @return return value description
+ */
 - (UIImage * _Nullable)blurryWithBlurLevel:(CGFloat)blur ;
+/**
+ *  画圆形图片
+ *
+ *  @param borderWidth
+ *  @param borderColor
+ *
+ *  @return 
+ */
+- (UIImage * _Nullable)circleImageWithBorderWidth:(CGFloat)borderWidth borderColor:(UIColor * _Nullable)borderColor;
 @end

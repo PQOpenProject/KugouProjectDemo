@@ -12,4 +12,5 @@
 
 + (instancetype)pgqBaseBottomView;
 
+- (void)iconImage;
 @end

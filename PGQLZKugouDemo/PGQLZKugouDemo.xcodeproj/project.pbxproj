@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		810679DC1D4F0942001C2ECE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810679DB1D4F0942001C2ECE /* Accelerate.framework */; };
 		810679DF1D4F0C06001C2ECE /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 810679DE1D4F0C06001C2ECE /* UIImage+ImageEffects.m */; };
+		810679E21D4F3A03001C2ECE /* SingTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810679E11D4F3A03001C2ECE /* SingTwoViewController.m */; };
+		810679E61D4F3A55001C2ECE /* SingHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 810679E51D4F3A55001C2ECE /* SingHeadView.m */; };
+		810679E81D4F3A66001C2ECE /* SingHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810679E71D4F3A66001C2ECE /* SingHeadView.xib */; };
+		810679ED1D4F3BED001C2ECE /* SingTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 810679EB1D4F3BED001C2ECE /* SingTwoTableViewCell.m */; };
+		810679EE1D4F3BED001C2ECE /* SingTwoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810679EC1D4F3BED001C2ECE /* SingTwoTableViewCell.xib */; };
 		8106F4B61D4B51A8002AE161 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106F4B51D4B51A8002AE161 /* BaseViewController.m */; };
 		8106F4B91D4B6078002AE161 /* WatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106F4B81D4B6078002AE161 /* WatchViewController.m */; };
 		8140ED1D1D49B442009D369F /* UIScrollView+PQScrollExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8140ED1C1D49B442009D369F /* UIScrollView+PQScrollExtension.m */; };
@@ -65,6 +70,15 @@
 		810679DB1D4F0942001C2ECE /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		810679DD1D4F0C06001C2ECE /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		810679DE1D4F0C06001C2ECE /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		810679E01D4F3A03001C2ECE /* SingTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingTwoViewController.h; sourceTree = "<group>"; };
+		810679E11D4F3A03001C2ECE /* SingTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingTwoViewController.m; sourceTree = "<group>"; };
+		810679E41D4F3A55001C2ECE /* SingHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingHeadView.h; sourceTree = "<group>"; };
+		810679E51D4F3A55001C2ECE /* SingHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingHeadView.m; sourceTree = "<group>"; };
+		810679E71D4F3A66001C2ECE /* SingHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingHeadView.xib; sourceTree = "<group>"; };
+		810679EA1D4F3BED001C2ECE /* SingTwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingTwoTableViewCell.h; sourceTree = "<group>"; };
+		810679EB1D4F3BED001C2ECE /* SingTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingTwoTableViewCell.m; sourceTree = "<group>"; };
+		810679EC1D4F3BED001C2ECE /* SingTwoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingTwoTableViewCell.xib; sourceTree = "<group>"; };
+		810679F01D4F3C78001C2ECE /* SingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingHeader.h; sourceTree = "<group>"; };
 		8106F4B41D4B51A8002AE161 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		8106F4B51D4B51A8002AE161 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		8106F4B71D4B6078002AE161 /* WatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchViewController.h; sourceTree = "<group>"; };
@@ -157,6 +171,34 @@
 				753492DADBD2BCAE33AA963E /* libPods-PGQLZKugouDemo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		810679E31D4F3A1B001C2ECE /* view */ = {
+			isa = PBXGroup;
+			children = (
+				810679E41D4F3A55001C2ECE /* SingHeadView.h */,
+				810679E51D4F3A55001C2ECE /* SingHeadView.m */,
+				810679E71D4F3A66001C2ECE /* SingHeadView.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		810679E91D4F3BD6001C2ECE /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				810679EA1D4F3BED001C2ECE /* SingTwoTableViewCell.h */,
+				810679EB1D4F3BED001C2ECE /* SingTwoTableViewCell.m */,
+				810679EC1D4F3BED001C2ECE /* SingTwoTableViewCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
+		810679EF1D4F3C5E001C2ECE /* header */ = {
+			isa = PBXGroup;
+			children = (
+				810679F01D4F3C78001C2ECE /* SingHeader.h */,
+			);
+			name = header;
 			sourceTree = "<group>";
 		};
 		8106F4B31D4B5189002AE161 /* Base */ = {
@@ -309,9 +351,14 @@
 		81F5F02D1D45A1F600A65198 /* 唱 */ = {
 			isa = PBXGroup;
 			children = (
+				810679EF1D4F3C5E001C2ECE /* header */,
+				810679E91D4F3BD6001C2ECE /* cell */,
+				810679E31D4F3A1B001C2ECE /* view */,
 				81F397441D4C86CE00474D18 /* SingViewController.h */,
 				81F397451D4C86CE00474D18 /* SingViewController.m */,
 				81F397471D4C86ED00474D18 /* SingStoryboard.storyboard */,
+				810679E01D4F3A03001C2ECE /* SingTwoViewController.h */,
+				810679E11D4F3A03001C2ECE /* SingTwoViewController.m */,
 			);
 			name = "唱";
 			sourceTree = "<group>";
@@ -557,10 +604,12 @@
 			files = (
 				818545AA1D42231500FFA8B2 /* LaunchScreen.storyboard in Resources */,
 				81F5F05F1D45C06500A65198 /* PGQ_BaseBottomView.xib in Resources */,
+				810679E81D4F3A66001C2ECE /* SingHeadView.xib in Resources */,
 				818545A71D42231500FFA8B2 /* Assets.xcassets in Resources */,
 				818545A51D42231500FFA8B2 /* Main.storyboard in Resources */,
 				81F5F0461D45A36600A65198 /* IntroducePlist.plist in Resources */,
 				81F397481D4C86ED00474D18 /* SingStoryboard.storyboard in Resources */,
+				810679EE1D4F3BED001C2ECE /* SingTwoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,16 +689,19 @@
 				81F5F0421D45A29A00A65198 /* UIView+pgqViewExtension.m in Sources */,
 				81F5F0401D45A29A00A65198 /* UIControl+PQControlExtension.m in Sources */,
 				81F5F05B1D45A88A00A65198 /* PGQ_BaseCenterView.m in Sources */,
+				810679ED1D4F3BED001C2ECE /* SingTwoTableViewCell.m in Sources */,
 				81F5F0351D45A27000A65198 /* IntroduceViewController.m in Sources */,
 				81F5F0391D45A29100A65198 /* PLNavigationViewController.m in Sources */,
 				EDACACFA1D49EF650053530B /* ListenViewController.m in Sources */,
 				81F3974B1D4C971400474D18 /* PQ_TimerManager.m in Sources */,
 				81F5F0491D45A5AB00A65198 /* BaseViewModel.m in Sources */,
+				810679E21D4F3A03001C2ECE /* SingTwoViewController.m in Sources */,
 				81F5F0411D45A29A00A65198 /* UIImage+pgqImageExtension.m in Sources */,
 				8188F9361D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m in Sources */,
 				818545A21D42231500FFA8B2 /* RootViewController.m in Sources */,
 				810679DF1D4F0C06001C2ECE /* UIImage+ImageEffects.m in Sources */,
 				8185459F1D42231500FFA8B2 /* AppDelegate.m in Sources */,
+				810679E61D4F3A55001C2ECE /* SingHeadView.m in Sources */,
 				81F5F0531D45A79B00A65198 /* PGQ_BaseTopView.m in Sources */,
 				81F5F04F1D45A64B00A65198 /* PGQ_ScrollModel.m in Sources */,
 				81F5F0571D45A81D00A65198 /* PGQ_BaseBottomView.m in Sources */,
