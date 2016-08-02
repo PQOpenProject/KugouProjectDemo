@@ -32,6 +32,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"watch - %@",self.navigationController);
+}
 
 
 @end

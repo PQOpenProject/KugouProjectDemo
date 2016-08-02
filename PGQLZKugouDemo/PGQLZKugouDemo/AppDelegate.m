@@ -31,12 +31,17 @@ static NSString * const IS_FIRST_START = @"isFirstStart";
     }
     else{
         RootViewController * base = [[RootViewController alloc] init];
+        
         PLNavigationViewController * navigation = [[PLNavigationViewController alloc]initWithRootViewController:base];
-        self.base = base;
         self.window.rootViewController = navigation;
         
+        
+//        RootViewController * root = [[RootViewController alloc]init];
+//        UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:root];
+//        nav.navigationBar.hidden = YES;
+//        self.window.rootViewController = nav;
     }
-    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

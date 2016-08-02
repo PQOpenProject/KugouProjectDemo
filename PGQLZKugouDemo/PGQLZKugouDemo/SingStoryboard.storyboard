@@ -256,12 +256,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7H-e7-gTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1403" y="-202"/>
+            <point key="canvasLocation" x="1225" y="-202"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="Yzq-s0-QhZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ImI-0q-O9z" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ImI-0q-O9z" customClass="PLNavigationViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="arM-VO-Bem">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

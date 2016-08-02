@@ -102,4 +102,8 @@ static  NSString * const identifier = @"SING_TWOCELL";
 }
 
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"sing - %@",self.navigationController);
+}
+
 @end

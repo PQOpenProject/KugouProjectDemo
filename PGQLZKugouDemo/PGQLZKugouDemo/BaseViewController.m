@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "RootViewController.h"
 #import "BasicHeader.h"
 #import "UIImage+ImageEffects.h"
 @interface BaseViewController ()
@@ -15,11 +16,17 @@
 
 @implementation BaseViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+}
+//模糊图片处理
 - (void)updateForImageWithName:(NSString *)imgName{
     self.backgroundIMG = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, PL_SRCEEN_WIDTH, 244)];
     self.backgroundIMG.image = [[UIImage imageNamed:imgName] blurImageAtFrame:CGRectMake(0, 84, PL_SRCEEN_WIDTH, 244)];

@@ -58,16 +58,21 @@
     int x = 0;
     for (int i = 0; i < self.viewControllers.count; i++) {
         x = i;
-        UIView * viewController = self.viewControllers[i];
-        viewController.x = i * self.scrollView.width;
-        [self.scrollView addSubview:viewController];
+        UIViewController * viewController = self.viewControllers[i];
+        NSLog(@"把view添加进入scrollview之前 - %@",viewController.navigationController);
+        viewController.view.x = i * self.scrollView.width;
+        [self.scrollView addSubview:viewController.view];
     }
     
     self.scrollView.contentSize = CGSizeMake(self.viewControllers.count * self.scrollView.width, 0);
     [self addSubview:self.scrollView];
+    NSLog(@"全部添加进去之后，输入第一个 - nav %@", [self.viewControllers[0] navigationController]);
+    NSLog(@"全部添加进去之后，输入第二个 - nav %@", [self.viewControllers[1] navigationController]);
+    NSLog(@"全部添加进去之后，输入第三个 - nav %@", [self.viewControllers[2] navigationController]);
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"滑动停止之后 - nav %@", [self.viewControllers[0] navigationController]);
     self.pageIndexBlock(_pageIndex);
 }
 

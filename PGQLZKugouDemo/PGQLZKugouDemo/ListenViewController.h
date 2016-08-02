@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface ListenViewController : BaseViewController
+@interface ListenViewController :BaseViewController
 
 
 

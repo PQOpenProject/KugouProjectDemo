@@ -69,11 +69,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     //初始化UI
     [self initUI];
     //处理事件
     [self event];
-    
 }
 
 - (void)event{
@@ -99,12 +102,28 @@
     
     UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"SingStoryboard" bundle:nil];
     self.singVC2 = [storyBoard instantiateViewControllerWithIdentifier:@"singVC2"];
+    PLNavigationViewController * singNAV = [[PLNavigationViewController alloc]initWithRootViewController:self.singVC2];
+    NSLog(@"singVC2 - %@",self.singVC2.navigationController);
+    
     self.watchVC = [[WatchViewController alloc]init];
+    UINavigationController * watchNAV = [[UINavigationController alloc]initWithRootViewController:self.watchVC];
+    NSLog(@"wathcVC - %@",self.watchVC.navigationController);
     
-   self.listenVC= [[ListenViewController alloc]init];
+    self.listenVC= [[ListenViewController alloc]init];
+    PLNavigationViewController * listenNAV = [[PLNavigationViewController alloc]initWithRootViewController:self.listenVC];
+    NSLog(@"listenVC - %@",self.listenVC.navigationController);
     
-    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[self.listenVC.view,self.watchVC.view,self.singVC2.view] PageBlock:^(NSInteger pageIndex) {
-        NSLog(@"scroll - pageindex %ld",pageIndex);
+    
+    NSArray * VCS = @[self.listenVC,self.watchVC,self.singVC2];
+    
+    NSLog(@"root %@",self.navigationController);
+    
+    NSArray * NAVS = @[listenNAV.topViewController,watchNAV.topViewController,singNAV.topViewController];
+    
+    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:NAVS PageBlock:^(NSInteger pageIndex) {
+        
+//        NSLog(@"scroll - pageindex %ld",pageIndex);
+        
         [self.baseVM.scrollCommand execute:@(pageIndex)];
     }];
     [self.view addSubview:self.centerView];
