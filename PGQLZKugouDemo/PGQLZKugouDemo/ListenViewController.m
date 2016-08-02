@@ -15,7 +15,6 @@
     self.view.backgroundColor = [UIColor clearColor];
 }
 
-
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     NSLog(@"listen - %@",self.navigationController);
 }

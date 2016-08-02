@@ -102,15 +102,15 @@
     
     UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"SingStoryboard" bundle:nil];
     self.singVC2 = [storyBoard instantiateViewControllerWithIdentifier:@"singVC2"];
-    PLNavigationViewController * singNAV = [[PLNavigationViewController alloc]initWithRootViewController:self.singVC2];
+//    PLNavigationViewController * singNAV = [[PLNavigationViewController alloc]initWithRootViewController:self.singVC2];
     NSLog(@"singVC2 - %@",self.singVC2.navigationController);
     
     self.watchVC = [[WatchViewController alloc]init];
-    UINavigationController * watchNAV = [[UINavigationController alloc]initWithRootViewController:self.watchVC];
+//    UINavigationController * watchNAV = [[UINavigationController alloc]initWithRootViewController:self.watchVC];
     NSLog(@"wathcVC - %@",self.watchVC.navigationController);
     
     self.listenVC= [[ListenViewController alloc]init];
-    PLNavigationViewController * listenNAV = [[PLNavigationViewController alloc]initWithRootViewController:self.listenVC];
+//    PLNavigationViewController * listenNAV = [[PLNavigationViewController alloc]initWithRootViewController:self.listenVC];
     NSLog(@"listenVC - %@",self.listenVC.navigationController);
     
     
@@ -118,9 +118,15 @@
     
     NSLog(@"root %@",self.navigationController);
     
-    NSArray * NAVS = @[listenNAV.topViewController,watchNAV.topViewController,singNAV.topViewController];
+//    NSArray * NAVS = @[listenNAV.topViewController,watchNAV.topViewController,singNAV.topViewController];
     
-    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:NAVS PageBlock:^(NSInteger pageIndex) {
+    
+    [self addChildViewController:self.listenVC];
+    [self addChildViewController:self.watchVC];
+    [self addChildViewController:self.singVC2];
+    [self fitFrameForChildViewController:self];
+    
+    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:VCS PageBlock:^(NSInteger pageIndex) {
         
 //        NSLog(@"scroll - pageindex %ld",pageIndex);
         
@@ -130,6 +136,12 @@
     
     [self.view addSubview:self.bottomView];
 }
+- (void)fitFrameForChildViewController:(UIViewController *)chileViewController{
+    CGRect frame = self.view.frame;
+    frame.origin.y = 0;
+    chileViewController.view.frame = frame;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
