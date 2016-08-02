@@ -29,7 +29,7 @@
 @property (nonatomic,strong) SingViewController * singVC;
 @property (nonatomic,strong) WatchViewController * watchVC;
 
-@property (nonatomic,strong) PGQ_SingViewController * singVC;
+//@property (nonatomic,strong) PGQ_SingViewController * singVC;
 
 @property (nonatomic,strong) ListenViewController *listenVC;
 

@@ -12,8 +12,6 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
-//    [self.view frostedglassStyle:UIBlurEffectStyleDark];
     
     UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, PL_SRCEEN_WIDTH, 200)];
     
