@@ -28,6 +28,7 @@
 		818545B51D42231500FFA8B2 /* PGQLZKugouDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 818545B41D42231500FFA8B2 /* PGQLZKugouDemoTests.m */; };
 		818545C01D42231500FFA8B2 /* PGQLZKugouDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 818545BF1D42231500FFA8B2 /* PGQLZKugouDemoUITests.m */; };
 		8188F9361D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188F9351D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m */; };
+		81E511421D50484800A0261A /* PQTopTextBottomLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E511411D50484800A0261A /* PQTopTextBottomLineView.m */; };
 		81F397461D4C86CE00474D18 /* SingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F397451D4C86CE00474D18 /* SingViewController.m */; };
 		81F397481D4C86ED00474D18 /* SingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F397471D4C86ED00474D18 /* SingStoryboard.storyboard */; };
 		81F3974B1D4C971400474D18 /* PQ_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F3974A1D4C971400474D18 /* PQ_TimerManager.m */; };
@@ -103,6 +104,8 @@
 		818545C11D42231500FFA8B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8188F9341D4A09E1001A1E75 /* UIAlertController+PQ_alertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+PQ_alertView.h"; sourceTree = "<group>"; };
 		8188F9351D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+PQ_alertView.m"; sourceTree = "<group>"; };
+		81E511401D50484800A0261A /* PQTopTextBottomLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQTopTextBottomLineView.h; sourceTree = "<group>"; };
+		81E511411D50484800A0261A /* PQTopTextBottomLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQTopTextBottomLineView.m; sourceTree = "<group>"; };
 		81F397441D4C86CE00474D18 /* SingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingViewController.h; sourceTree = "<group>"; };
 		81F397451D4C86CE00474D18 /* SingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingViewController.m; sourceTree = "<group>"; };
 		81F397471D4C86ED00474D18 /* SingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SingStoryboard.storyboard; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 				810679E41D4F3A55001C2ECE /* SingHeadView.h */,
 				810679E51D4F3A55001C2ECE /* SingHeadView.m */,
 				810679E71D4F3A66001C2ECE /* SingHeadView.xib */,
+				81E511401D50484800A0261A /* PQTopTextBottomLineView.h */,
+				81E511411D50484800A0261A /* PQTopTextBottomLineView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -696,6 +701,7 @@
 				81F3974B1D4C971400474D18 /* PQ_TimerManager.m in Sources */,
 				81F5F0491D45A5AB00A65198 /* BaseViewModel.m in Sources */,
 				810679E21D4F3A03001C2ECE /* SingTwoViewController.m in Sources */,
+				81E511421D50484800A0261A /* PQTopTextBottomLineView.m in Sources */,
 				81F5F0411D45A29A00A65198 /* UIImage+pgqImageExtension.m in Sources */,
 				8188F9361D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m in Sources */,
 				818545A21D42231500FFA8B2 /* RootViewController.m in Sources */,

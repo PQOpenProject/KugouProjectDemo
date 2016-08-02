@@ -34,6 +34,15 @@
     [self setUpForTopScrollView];
     [self setUpForPageControl];
     [self createTimer];
+    [self addTapEventForCenterView];
+}
+
+- (void)addTapEventForCenterView{
+    for (NSInteger i = 4; i < self.centerView.subviews.count; i++) {
+        UIView * view = self.centerView.subviews[i];
+        UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singHead_bodyTapEvent:)];
+        [view addGestureRecognizer:tap];
+    }
 }
 
 + (instancetype)singHeadViewForNib{
@@ -42,7 +51,7 @@
     return [objs firstObject];
 }
 
-- (IBAction)singHead_bodyTapEvent:(UITapGestureRecognizer *)sender {
+- (void)singHead_bodyTapEvent:(UITapGestureRecognizer *)sender {
     self.bodyBlock(sender.view.tag);
 }
 

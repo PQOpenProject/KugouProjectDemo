@@ -14,5 +14,5 @@
 #import "SingTwoViewController.h"
 #import "SingTwoTableViewCell.h"
 #import "SingHeadView.h"
-
+#import "PQTopTextBottomLineView.h"
 #endif /* SingHeader_h */

@@ -19,7 +19,6 @@ static  NSString * const identifier = @"SING_TWOCELL";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.myTableView registerNib:[UINib nibWithNibName:@"SingTwoTableViewCell" bundle:nil] forCellReuseIdentifier:identifier];
-    self.myTableView.backgroundColor = [UIColor redColor];
     
 }
 
