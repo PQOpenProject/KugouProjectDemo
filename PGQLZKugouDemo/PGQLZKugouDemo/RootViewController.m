@@ -107,9 +107,26 @@
     
     self.watchVC = [[WatchViewController alloc]init];
     ListenViewController *listenVC = [[ListenViewController alloc]init];
+    UINavigationController * watchNAV = [[UINavigationController alloc]initWithRootViewController:self.watchVC];
+    NSLog(@"wathcVC - %@",self.watchVC.navigationController);
     
     self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[listenVC.view,self.watchVC.view,self.singVC.view] PageBlock:^(NSInteger pageIndex) {
         NSLog(@"scroll - pageindex %ld",pageIndex);
+    self.listenVC= [[ListenViewController alloc]init];
+    PLNavigationViewController * listenNAV = [[PLNavigationViewController alloc]initWithRootViewController:self.listenVC];
+    NSLog(@"listenVC - %@",self.listenVC.navigationController);
+    
+    
+    NSArray * VCS = @[self.listenVC,self.watchVC,self.singVC2];
+    
+    NSLog(@"root %@",self.navigationController);
+    
+    NSArray * NAVS = @[listenNAV.topViewController,watchNAV.topViewController,singNAV.topViewController];
+    
+    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:NAVS PageBlock:^(NSInteger pageIndex) {
+        
+//        NSLog(@"scroll - pageindex %ld",pageIndex);
+        
         [self.baseVM.scrollCommand execute:@(pageIndex)];
     }];
     [self.view addSubview:self.centerView];
