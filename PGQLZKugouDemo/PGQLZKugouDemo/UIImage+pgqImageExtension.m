@@ -522,4 +522,42 @@ static PrintScreenBlock _psBlock = nil;
     
 }
 
+- (UIImage * _Nullable)circleImageWithBorderWidth:(CGFloat)borderWidth borderColor:(UIColor * _Nullable)borderColor{
+    CGFloat imageW = self.size.width + 22 * borderWidth;
+    CGFloat imageH = self.size.height + 22 * borderWidth;
+    CGSize imageSize = CGSizeMake(imageW, imageH);
+    //开启上下文
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0);
+    
+    //取得上下文
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    
+    CGFloat centerX = imageW;
+    CGFloat centerY = imageW;
+    CGFloat bigRadius = imageW;
+    //画边框
+    if (borderWidth>0) {
+        [borderColor set];
+        bigRadius = imageW * 0.5;
+        centerX = bigRadius;
+        centerY = bigRadius;
+        CGContextAddArc(ctx, centerX, centerY, bigRadius, 0, M_PI*2.0, 0);
+        CGContextFillPath(ctx);
+    }
+    //小圆
+    CGFloat smallRadius;
+    if (borderWidth > 0) {
+        smallRadius = bigRadius - borderWidth;
+    }else{
+        smallRadius = borderWidth;
+    }
+    CGContextAddArc(ctx, centerX, centerY, smallRadius, 0, M_PI*2.0, 0);
+    CGContextClip(ctx);
+    
+    [self drawInRect:CGRectMake(borderWidth, borderWidth, self.size.width, self.size.height)];
+    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
 @end

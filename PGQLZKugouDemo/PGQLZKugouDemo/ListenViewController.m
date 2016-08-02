@@ -1,6 +1,6 @@
 //
 //  ListenViewController.m
-//  PGQLZKugouDemo
+//  ;
 //
 //  Created by Liuzhen on 16/7/28.
 //  Copyright © 2016年 PL. All rights reserved.
@@ -18,10 +18,9 @@
     [self.view addSubview:view];
 }
 
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    NSLog(@"%@ - 接收到touce！！！",self);
+    NSLog(@"listen - %@",self.navigationController);
 }
-
-
 
 @end

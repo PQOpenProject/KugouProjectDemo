@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "BasicHeader.h"
 #import "BaseHeader.h"
+#import "SingHeader.h"
 @interface RootViewController ()
 /**
  *  顶部view
@@ -27,6 +28,7 @@
  */
 @property (nonatomic,strong) BaseViewModel * baseVM;
 @property (nonatomic,strong) SingViewController * singVC;
+@property (nonatomic,strong) SingTwoViewController * singVC2;
 @property (nonatomic,strong) WatchViewController * watchVC;
 
 //@property (nonatomic,strong) PGQ_SingViewController * singVC;
@@ -62,17 +64,21 @@
         _bottomView = [PGQ_BaseBottomView pgqBaseBottomView];
         _bottomView.width = PL_SRCEEN_WIDTH;
         _bottomView.y = self.view.bounds.size.height - 50;
+//        [_bottomView iconImage];
     }
     return _bottomView;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     //初始化UI
     [self initUI];
     //处理事件
     [self event];
-    
 }
 
 - (void)event{
@@ -82,9 +88,9 @@
         [self.centerView updateScrollViewContentOffSetWith:[x integerValue]];
         
         if ([x integerValue] == 2) {
-            [self.singVC startTopScrollViewTimer];
+            [self.singVC2 startTopScrollViewTimer];
         }else{
-            [self.singVC closeTopScrollViewTimer];
+            [self.singVC2 closeTopScrollViewTimer];
         }
         
     }];
@@ -95,7 +101,10 @@
     [self updateForImageWithName:@"theme_default.jpg"];
     [self.view addSubview:self.topView];
     UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"SingStoryboard" bundle:nil];
-    self.singVC = [storyBoard instantiateViewControllerWithIdentifier:@"singVC"];
+    self.singVC2 = [storyBoard instantiateViewControllerWithIdentifier:@"singVC2"];
+    PLNavigationViewController * singNAV = [[PLNavigationViewController alloc]initWithRootViewController:self.singVC2];
+    NSLog(@"singVC2 - %@",self.singVC2.navigationController);
+    
     self.watchVC = [[WatchViewController alloc]init];
     ListenViewController *listenVC = [[ListenViewController alloc]init];
     

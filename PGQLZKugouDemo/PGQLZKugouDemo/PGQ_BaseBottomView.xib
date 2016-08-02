@@ -16,15 +16,30 @@
                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aoz-s3-RJg">
                     <rect key="frame" x="14" y="5" width="60" height="60"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fx_kglive_viewer_default" translatesAutoresizingMaskIntoConstraints="NO" id="0We-Sg-Buw">
-                            <rect key="frame" x="0.0" y="8" width="60" height="60"/>
+                        <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fx_kglive_viewer_default" translatesAutoresizingMaskIntoConstraints="NO" id="0We-Sg-Buw">
+                            <rect key="frame" x="0.0" y="-12" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="L4s-3s-eTe"/>
+                                <constraint firstAttribute="width" constant="60" id="a1u-nH-l5q"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="30"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                    <color key="value" red="0.97291666666666665" green="0.97291666666666665" blue="0.97291666666666665" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </imageView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="0We-Sg-Buw" firstAttribute="top" secondItem="Aoz-s3-RJg" secondAttribute="top" constant="8" id="2aY-UK-40G"/>
+                        <constraint firstItem="0We-Sg-Buw" firstAttribute="top" secondItem="Aoz-s3-RJg" secondAttribute="top" constant="-12" id="2aY-UK-40G"/>
                         <constraint firstItem="0We-Sg-Buw" firstAttribute="leading" secondItem="Aoz-s3-RJg" secondAttribute="leading" id="8iE-Sx-OFh"/>
                         <constraint firstAttribute="trailing" secondItem="0We-Sg-Buw" secondAttribute="trailing" id="FVy-rf-kIf"/>
-                        <constraint firstAttribute="bottom" secondItem="0We-Sg-Buw" secondAttribute="bottom" constant="-8" id="TAo-B5-lVk"/>
+                        <constraint firstAttribute="bottom" secondItem="0We-Sg-Buw" secondAttribute="bottom" constant="2" id="TAo-B5-lVk"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ddm-99-aqX">
@@ -107,7 +122,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.43335336538461533" green="0.43335336538461533" blue="0.43335336538461533" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="Ddm-99-aqX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="80" id="CoE-Fr-bOl"/>
                 <constraint firstItem="Aoz-s3-RJg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-20" id="DEG-zH-bPT"/>
@@ -121,7 +136,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="iconImage" destination="0We-Sg-Buw" id="Pth-AI-HSw"/>
+                <outlet property="iconImageView" destination="0We-Sg-Buw" id="IyL-77-izc"/>
                 <outlet property="nextBtn" destination="z7u-qh-pDA" id="DwD-hd-KA0"/>
                 <outlet property="playOrPauseBtn" destination="dMM-hY-L7K" id="xox-Bf-fTA"/>
                 <outlet property="progressView" destination="Lre-u6-36P" id="o3F-LV-oGI"/>

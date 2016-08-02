@@ -7,10 +7,13 @@
 //
 
 #import "PGQ_BaseBottomView.h"
-#import "UIView+pgqViewExtension.h"
+
+#import "BasicHeader.h"
+
 @interface PGQ_BaseBottomView ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UILabel *songLabel;
@@ -23,13 +26,6 @@
 
 @implementation PGQ_BaseBottomView
 
-- (void)awakeFromNib{
-//    self.iconImage.height = self.iconImage.width;
-    NSLog(@"%f %f",self.iconImage.width,self.iconImage.height);
-    self.iconImage.layer.cornerRadius = self.iconImage.width/2;
-    self.iconImage.clipsToBounds = YES;
-}
-
 + (instancetype)pgqBaseBottomView{
 
     NSBundle *bundle=[NSBundle mainBundle];
@@ -37,6 +33,7 @@
     return [objs lastObject];
     
 }
-
-
+- (void)iconImage{
+    self.iconImageView.image = [self.iconImageView.image circleImageWithBorderWidth:5 borderColor:[UIColor orangeColor]];
+}
 @end
