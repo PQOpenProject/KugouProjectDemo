@@ -12,17 +12,10 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
-//    [self.view frostedglassStyle:UIBlurEffectStyleDark];
-    
-    UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, PL_SRCEEN_WIDTH, 200)];
-    
-    [self.view addSubview:view];
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    NSLog(@"%@ - 接收到touce！！！",self);
-}
+
 
 
 

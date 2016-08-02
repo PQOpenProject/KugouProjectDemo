@@ -38,7 +38,7 @@
 }
 
 - (void)addTapEventForCenterView{
-    for (NSInteger i = 4; i < self.centerView.subviews.count; i++) {
+    for (NSInteger i = 3; i < self.centerView.subviews.count; i++) {
         UIView * view = self.centerView.subviews[i];
         UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singHead_bodyTapEvent:)];
         [view addGestureRecognizer:tap];

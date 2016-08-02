@@ -20,7 +20,7 @@
 
 - (UILabel *)lineLabel{
     if (!_lineLabel) {
-        _lineLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, self.height - 3,  self.width, 2)];
+        _lineLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, self.height - 3,  self.width/self.titles.count, 2)];
         _lineLabel.backgroundColor = [UIColor blueColor];
     }
     return _lineLabel;
@@ -35,7 +35,7 @@
 
 + (instancetype)pq_topTextBottomLineWithHeight:(CGFloat)height titles:(NSArray *)titles clickItem:(void(^)(NSString * string,NSInteger itemIndex))block{
     PQTopTextBottomLineView * ttbl = [[PQTopTextBottomLineView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, ((height < 44) ? 44:height))];
-    
+    ttbl.titles = titles;
     [ttbl setUp:block];
     return ttbl;
 }
@@ -73,12 +73,17 @@
     UIButton * button = [[UIButton alloc]initWithFrame:frame];
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blueColor] forState:UIControlStateSelected];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     button.tag = tag;
     [RACObserve(button, selected) subscribeNext:^(id x) {
         if (button.selected == YES) {
             [UIView animateWithDuration:0.25f animations:^{
                 self.lineLabel.x = button.x;
+                button.transform = CGAffineTransformMakeScale(1.1, 1.1);
             }];
+        }
+        else{
+            button.transform = CGAffineTransformMakeScale(1, 1);
         }
     }];
     return button;
@@ -91,6 +96,10 @@
         button.selected = YES;
         _lastButton = button;
     }];
+}
+
+- (void)pq_updateLineColor:(UIColor *)lineColor;{
+    self.lineLabel.backgroundColor = lineColor;
 }
 
 @end
