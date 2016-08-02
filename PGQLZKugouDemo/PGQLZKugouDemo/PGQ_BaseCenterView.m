@@ -66,9 +66,13 @@
     
     self.scrollView.contentSize = CGSizeMake(self.viewControllers.count * self.scrollView.width, 0);
     [self addSubview:self.scrollView];
-    NSLog(@"全部添加进去之后，输入第一个 - nav %@", [self.viewControllers[0] navigationController]);
-    NSLog(@"全部添加进去之后，输入第二个 - nav %@", [self.viewControllers[1] navigationController]);
-    NSLog(@"全部添加进去之后，输入第三个 - nav %@", [self.viewControllers[2] navigationController]);
+    //延迟两秒
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"全部添加进去之后，输入第一个 - nav %@", [self.viewControllers[0] navigationController]);
+        NSLog(@"全部添加进去之后，输入第二个 - nav %@", [self.viewControllers[1] navigationController]);
+        NSLog(@"全部添加进去之后，输入第三个 - nav %@", [self.viewControllers[2] navigationController]);
+    });
+    
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
