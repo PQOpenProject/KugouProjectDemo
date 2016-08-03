@@ -75,10 +75,14 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    //初始化UI
-    [self initUI];
-    //处理事件
-    [self event];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        //初始化UI
+        [self initUI];
+        //处理事件
+        [self event];
+    });
+    
 }
 
 - (void)event{
@@ -111,7 +115,7 @@
     [self addChildViewController:self.listenVC];
     [self addChildViewController:self.watchVC];
     [self addChildViewController:self.singVC2];
-    [self fitFrameForChildViewController:self];
+//    [self fitFrameForChildViewController:self];
     
     self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:VCS PageBlock:^(NSInteger pageIndex) {
         

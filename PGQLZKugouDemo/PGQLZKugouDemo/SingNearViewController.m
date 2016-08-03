@@ -42,7 +42,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self.view2 pq_setSelectedItem:rand()%5];
+    [self.view2 pq_setSelectedItem:rand()%3];
     [self.view2 pq_updateTextColor:RANDOM_COLOR];
     [self.view2 pq_updateLineColor:RANDOM_COLOR];
     [self.view2 pq_updateTextSelectedColor:RANDOM_COLOR];
