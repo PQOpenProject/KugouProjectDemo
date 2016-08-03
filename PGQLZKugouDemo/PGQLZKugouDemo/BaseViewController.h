@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseViewController : UIViewController
-
+/**
+ *  更新背景图片
+ *
+ *  @param imgName
+ */
 - (void)updateForImageWithName:(NSString *)imgName;
 
 @end

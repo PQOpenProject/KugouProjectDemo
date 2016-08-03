@@ -44,4 +44,10 @@
 #define PL_SRCEEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define PL_SRCEEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
+
+//接口
+//酷狗搜歌接口
+#define KGSEAECHURL @"http://mobilecdn.kugou.com/api/v3/search/song?format=jsonp"
+#define KG_SEARCH(keyword,pageindex,pagesize) [NSString stringWithFormat:@"%@&keyword=%@&page=%@&pagesize=%@&showtype=1",KGSEAECHURL,keyword,pageindex,pagesize]
+
 #endif /* BasicHeader_h */

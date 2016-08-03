@@ -243,6 +243,7 @@
 		818545991D42231500FFA8B2 /* PGQLZKugouDemo */ = {
 			isa = PBXGroup;
 			children = (
+				81E65DD91D51952700BEE9B4 /* PCH */,
 				81F3974C1D4C972400474D18 /* 类的封装 */,
 				81F5F0431D45A2A200A65198 /* 数据库 */,
 				81F5F0301D45A21800A65198 /* 侧滑 */,
@@ -311,12 +312,51 @@
 		81E65DD41D51803100BEE9B4 /* 唱 */ = {
 			isa = PBXGroup;
 			children = (
+				81E65DD81D518F5500BEE9B4 /* VM */,
+				81E65DD71D518F4F00BEE9B4 /* View */,
+				81E65DD61D518F4600BEE9B4 /* Model */,
+				81E65DD51D518F3400BEE9B4 /* ViewController */,
+			);
+			name = "唱";
+			sourceTree = "<group>";
+		};
+		81E65DD51D518F3400BEE9B4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
 				81F397441D4C86CE00474D18 /* SingViewController.h */,
 				81F397451D4C86CE00474D18 /* SingViewController.m */,
 				810679E01D4F3A03001C2ECE /* SingTwoViewController.h */,
 				810679E11D4F3A03001C2ECE /* SingTwoViewController.m */,
 			);
-			name = "唱";
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		81E65DD61D518F4600BEE9B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		81E65DD71D518F4F00BEE9B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		81E65DD81D518F5500BEE9B4 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = VM;
+			sourceTree = "<group>";
+		};
+		81E65DD91D51952700BEE9B4 /* PCH */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PCH;
 			sourceTree = "<group>";
 		};
 		81F3974C1D4C972400474D18 /* 类的封装 */ = {

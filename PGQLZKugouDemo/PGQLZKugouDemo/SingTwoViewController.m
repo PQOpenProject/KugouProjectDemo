@@ -19,17 +19,17 @@ static  NSString * const identifier = @"SING_TWOCELL";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.myTableView registerNib:[UINib nibWithNibName:@"SingTwoTableViewCell" bundle:nil] forCellReuseIdentifier:identifier];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-   
+    
     [_headView startTopScrollViewTimer];
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
+    
     [_headView closeTopScrollViewTimer];
 }
 
@@ -98,13 +98,11 @@ static  NSString * const identifier = @"SING_TWOCELL";
     
     [self.headView bodyViewClickItem:^(NSInteger item) {
         NSLog(@"在唱页面点击了 body - %ld",item);
-        
+        if (item == 0) {
+            SingNearViewController * sing = [[SingNearViewController alloc]init];
+            [self.navigationController pushViewController:sing animated:YES];
+        }
     }];
-}
-
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"sing - %@",self.navigationController);
 }
 
 @end
