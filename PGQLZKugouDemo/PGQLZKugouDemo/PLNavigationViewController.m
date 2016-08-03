@@ -16,8 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationBar.hidden = YES;
-    self.interactivePopGestureRecognizer.enabled = NO;
+//    self.navigationBar.hidden = YES;
+//    self.interactivePopGestureRecognizer.enabled = NO;
+    self.title = @"我去";
 }
 
 - (void)didReceiveMemoryWarning {

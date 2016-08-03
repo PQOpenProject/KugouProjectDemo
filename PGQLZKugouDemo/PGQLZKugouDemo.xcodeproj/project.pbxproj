@@ -31,6 +31,7 @@
 		81E511421D50484800A0261A /* PQTopTextBottomLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E511411D50484800A0261A /* PQTopTextBottomLineView.m */; };
 		81E65DD21D517F4D00BEE9B4 /* SingNearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E65DD11D517F4D00BEE9B4 /* SingNearViewController.m */; };
 		81E65DDE1D51C78A00BEE9B4 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E65DDD1D51C78A00BEE9B4 /* TabBarViewController.m */; };
+		81E65DE41D51ECDE00BEE9B4 /* UINavigationBar+PQNavBarExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E65DE31D51ECDE00BEE9B4 /* UINavigationBar+PQNavBarExtension.m */; };
 		81F397461D4C86CE00474D18 /* SingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F397451D4C86CE00474D18 /* SingViewController.m */; };
 		81F397481D4C86ED00474D18 /* SingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F397471D4C86ED00474D18 /* SingStoryboard.storyboard */; };
 		81F3974B1D4C971400474D18 /* PQ_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F3974A1D4C971400474D18 /* PQ_TimerManager.m */; };
@@ -112,6 +113,8 @@
 		81E65DD11D517F4D00BEE9B4 /* SingNearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingNearViewController.m; sourceTree = "<group>"; };
 		81E65DDC1D51C78A00BEE9B4 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		81E65DDD1D51C78A00BEE9B4 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		81E65DE21D51ECDE00BEE9B4 /* UINavigationBar+PQNavBarExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+PQNavBarExtension.h"; sourceTree = "<group>"; };
+		81E65DE31D51ECDE00BEE9B4 /* UINavigationBar+PQNavBarExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+PQNavBarExtension.m"; sourceTree = "<group>"; };
 		81F397441D4C86CE00474D18 /* SingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingViewController.h; sourceTree = "<group>"; };
 		81F397451D4C86CE00474D18 /* SingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingViewController.m; sourceTree = "<group>"; };
 		81F397471D4C86ED00474D18 /* SingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SingStoryboard.storyboard; sourceTree = "<group>"; };
@@ -477,6 +480,8 @@
 		81F5F0311D45A22700A65198 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				81E65DE21D51ECDE00BEE9B4 /* UINavigationBar+PQNavBarExtension.h */,
+				81E65DE31D51ECDE00BEE9B4 /* UINavigationBar+PQNavBarExtension.m */,
 				810679DD1D4F0C06001C2ECE /* UIImage+ImageEffects.h */,
 				810679DE1D4F0C06001C2ECE /* UIImage+ImageEffects.m */,
 				8188F9341D4A09E1001A1E75 /* UIAlertController+PQ_alertView.h */,
@@ -779,6 +784,7 @@
 				810679ED1D4F3BED001C2ECE /* SingTwoTableViewCell.m in Sources */,
 				81F5F0351D45A27000A65198 /* IntroduceViewController.m in Sources */,
 				81F5F0391D45A29100A65198 /* PLNavigationViewController.m in Sources */,
+				81E65DE41D51ECDE00BEE9B4 /* UINavigationBar+PQNavBarExtension.m in Sources */,
 				EDACACFA1D49EF650053530B /* ListenViewController.m in Sources */,
 				81F3974B1D4C971400474D18 /* PQ_TimerManager.m in Sources */,
 				81F5F0491D45A5AB00A65198 /* BaseViewModel.m in Sources */,

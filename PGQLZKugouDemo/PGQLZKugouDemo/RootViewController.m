@@ -22,6 +22,7 @@
 @property (nonatomic,strong) SingTwoViewController * singVC2;
 @property (nonatomic,strong) WatchViewController * watchVC;
 @property (nonatomic,strong) ListenViewController *listenVC;
+@property (nonatomic,assign) NSInteger showIndexPage;
 @end
 
 @implementation RootViewController
@@ -33,44 +34,31 @@
     return _baseVM;
 }
 
-- (PGQ_BaseTopView *)topView{
-    if (!_topView) {
-        _topView = [PGQ_BaseTopView pgq_BaseTopViewWithEvent:^(UIButton *button, NSInteger tag) {
-            [self.baseVM.scrollCommand execute:@(tag)];
-        } icon:^(UIButton *button, NSInteger tag) {
-            NSLog(@"icon");
-        } search:^(UIButton *button, NSInteger tag) {
-            NSLog(@"search");
-        }];
-    }
-    return _topView;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.view.backgroundColor = [UIColor orangeColor];
     [self initUI];
     //处理事件
     [self event];
+    self.navigationController.navigationBar.pq_BarBackgroundColor = 0;
+    [self.navigationController.navigationBar setNavigationBarBackgroundColor:[UIColor blueColor]];
 }
 
 - (void)event{
     //不管是谁发送了消息都相应的的更新
     [self.baseVM.scrollCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
-        [self.topView updateUserSelectedWithIndex:[x integerValue]];
         [self.centerView updateScrollViewContentOffSetWith:[x integerValue]];
         
         if ([x integerValue] == 2) {
             [self.singVC2 startTopScrollViewTimer];
         }else{
             [self.singVC2 closeTopScrollViewTimer];
-        }
-    }];
+        }    }];
 }
 
 - (void)initUI{
     //增加背景
     [self updateForImageWithName:@"theme_default.jpg"];
-    [self.view addSubview:self.topView];
     //create VC
     UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"SingStoryboard" bundle:nil];
     
@@ -85,15 +73,18 @@
     //添加
     self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[self.listenVC,self.watchVC,self.singVC2] PageBlock:^(NSInteger pageIndex) {
         //更新
+        _showIndexPage = pageIndex;
         [self.baseVM.scrollCommand execute:@(pageIndex)];
+    } offSet:^(CGFloat offset) {
+        if (offset < 0 ) {
+            NSLog(@"--%f",2 + offset);
+            self.navigationController.navigationBar.pq_BarBackgroundColor = (1 + offset);
+        }if (offset < 1) {
+            self.navigationController.navigationBar.pq_BarBackgroundColor = offset;
+        }
+//        NSLog(@"%f",offset);
     }];
     [self.view addSubview:self.centerView];
-}
-
-- (void)fitFrameForChildViewController:(UIViewController *)chileViewController{
-    CGRect frame = self.view.frame;
-    frame.origin.y = 0;
-    chileViewController.view.frame = frame;
 }
 
 - (void)didReceiveMemoryWarning {

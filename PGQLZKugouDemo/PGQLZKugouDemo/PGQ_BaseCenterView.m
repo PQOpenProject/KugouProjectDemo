@@ -14,6 +14,7 @@
 @property (nonatomic,copy) PGQ_BaseCenterViewPageIndexBlock pageIndexBlock;
 @property (nonatomic,strong) UIScrollView *scrollView;
 @property (nonatomic,strong) NSArray * viewControllers;
+@property (nonatomic,copy) PGQ_BaseCenterViewPageOffSetBlock offsetBlock;
 
 @end
 
@@ -45,9 +46,10 @@
     return _scrollView;
 }
 
-+ (instancetype)pgq_baseConterViewWithVCS:(NSArray *)vcs PageBlock:(PGQ_BaseCenterViewPageIndexBlock)pageIndexBlock{
-    PGQ_BaseCenterView * centerView = [[PGQ_BaseCenterView alloc]initWithFrame:CGRectMake(0, 64, PL_SRCEEN_WIDTH, PL_SRCEEN_HEIGHT-50-64)];
++ (instancetype)pgq_baseConterViewWithVCS:(NSArray *)vcs PageBlock:(PGQ_BaseCenterViewPageIndexBlock)pageIndexBlock offSet:(PGQ_BaseCenterViewPageOffSetBlock)offSetBlock{
+    PGQ_BaseCenterView * centerView = [[PGQ_BaseCenterView alloc]initWithFrame:CGRectMake(0, 0, PL_SRCEEN_WIDTH, PL_SRCEEN_HEIGHT-50-64)];
     centerView.pageIndexBlock = pageIndexBlock;
+    centerView.offsetBlock = offSetBlock;
     centerView.viewControllers = vcs;
     [centerView addViewsForScrollView];
     return centerView;
@@ -68,6 +70,7 @@
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+//    NSLog(@"滑动停止之后 - nav %@", [self.viewControllers[0] navigationController]);
     self.pageIndexBlock(_pageIndex);
 }
 
@@ -76,7 +79,9 @@
     CGFloat pageWidth = sender.frame.size.width;
     // 根据当前的x坐标和页宽度计算出当前页数
     _pageIndex = floor((sender.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-//    NSLog(@"%d",_pageIndex);
+    double offset = floor(fabs(sender.contentOffset.x) - pageWidth/2.0)/(pageWidth/2.0);
+    self.offsetBlock(offset);
+//    NSLog(@"%lf",offset);
 }
 
 

@@ -21,12 +21,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 }
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBar.hidden = YES;
-    
-}
 //模糊图片处理
 - (void)updateForImageWithName:(NSString *)imgName{
     self.backgroundIMG = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, PL_SRCEEN_WIDTH, 244)];
