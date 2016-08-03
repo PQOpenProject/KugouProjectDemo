@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BasicHeader.h"
+#import "TabBarViewController.h"
 @interface AppDelegate ()
 
 @property (nonatomic,strong) RootViewController * base ;
@@ -18,7 +19,7 @@
 static NSString * const IS_FIRST_START = @"isFirstStart";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    application.statusBarStyle = UIStatusBarStyleLightContent;
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     //判断是不是第一次进入
@@ -30,10 +31,14 @@ static NSString * const IS_FIRST_START = @"isFirstStart";
         self.window.rootViewController = navigation;
     }
     else{
-        RootViewController * base = [[RootViewController alloc] init];
+        TabBarViewController * tabbar = [[TabBarViewController alloc]init];
+        self.window.rootViewController = tabbar;
         
-        PLNavigationViewController * navigation = [[PLNavigationViewController alloc]initWithRootViewController:base];
-        self.window.rootViewController = navigation;
+        
+//        RootViewController * base = [[RootViewController alloc] init];
+//        
+//        PLNavigationViewController * navigation = [[PLNavigationViewController alloc]initWithRootViewController:base];
+//        self.window.rootViewController = navigation;
         
         
 //        RootViewController * root = [[RootViewController alloc]init];

@@ -68,7 +68,6 @@
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-//    NSLog(@"滑动停止之后 - nav %@", [self.viewControllers[0] navigationController]);
     self.pageIndexBlock(_pageIndex);
 }
 

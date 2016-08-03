@@ -16,10 +16,6 @@
  */
 @property (nonatomic,strong) PGQ_BaseTopView *topView;
 /**
- *  底部view
- */
-@property (nonatomic,strong) PGQ_BaseBottomView *bottomView;
-/**
  *  中间view
  */
 @property (nonatomic,strong) PGQ_BaseCenterView *centerView;
@@ -27,14 +23,9 @@
  *  ViewModel
  */
 @property (nonatomic,strong) BaseViewModel * baseVM;
-@property (nonatomic,strong) SingViewController * singVC;
 @property (nonatomic,strong) SingTwoViewController * singVC2;
 @property (nonatomic,strong) WatchViewController * watchVC;
-
-//@property (nonatomic,strong) PGQ_SingViewController * singVC;
-
 @property (nonatomic,strong) ListenViewController *listenVC;
-
 @end
 
 @implementation RootViewController
@@ -59,30 +50,11 @@
     return _topView;
 }
 
-- (PGQ_BaseBottomView *)bottomView{
-    if (!_bottomView) {
-        _bottomView = [PGQ_BaseBottomView pgqBaseBottomView];
-        _bottomView.width = PL_SRCEEN_WIDTH;
-        _bottomView.y = self.view.bounds.size.height - 50;
-        //        [_bottomView iconImage];
-    }
-    return _bottomView;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        //初始化UI
-        [self initUI];
-        //处理事件
-        [self event];
-    });
-    
+    [self initUI];
+    //处理事件
+    [self event];
 }
 
 - (void)event{
@@ -96,7 +68,6 @@
         }else{
             [self.singVC2 closeTopScrollViewTimer];
         }
-        
     }];
 }
 
@@ -106,27 +77,21 @@
     [self.view addSubview:self.topView];
     //create VC
     UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"SingStoryboard" bundle:nil];
-    self.singVC2 = [storyBoard instantiateViewControllerWithIdentifier:@"singVC2"];
-    self.watchVC = [[WatchViewController alloc]init];
-    self.listenVC= [[ListenViewController alloc]init];
-    //add VC to array
-    NSArray * VCS = @[self.listenVC,self.watchVC,self.singVC2];
     
+    self.listenVC = [[ListenViewController alloc] init];
     [self addChildViewController:self.listenVC];
-    [self addChildViewController:self.watchVC];
-    [self addChildViewController:self.singVC2];
-//    [self fitFrameForChildViewController:self];
     
-    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:VCS PageBlock:^(NSInteger pageIndex) {
-        
-        //        NSLog(@"scroll - pageindex %ld",pageIndex);
-        
+    self.watchVC = [[WatchViewController alloc] init];
+    [self addChildViewController:self.watchVC];
+    
+    self.singVC2 = [storyBoard instantiateViewControllerWithIdentifier:@"singVC2"];
+    [self addChildViewController:self.singVC2];
+    //添加
+    self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[self.listenVC,self.watchVC,self.singVC2] PageBlock:^(NSInteger pageIndex) {
+        //更新
         [self.baseVM.scrollCommand execute:@(pageIndex)];
     }];
     [self.view addSubview:self.centerView];
-    
-    [self.view addSubview:self.bottomView];
-    
 }
 
 - (void)fitFrameForChildViewController:(UIViewController *)chileViewController{
@@ -137,7 +102,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 

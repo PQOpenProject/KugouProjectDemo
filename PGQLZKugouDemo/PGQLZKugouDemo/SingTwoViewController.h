@@ -6,9 +6,9 @@
 //  Copyright © 2016年 PL. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface SingTwoViewController : UIViewController
+@interface SingTwoViewController : BaseViewController
 
 - (void)startTopScrollViewTimer;
 - (void)closeTopScrollViewTimer;

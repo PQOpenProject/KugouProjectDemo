@@ -6,8 +6,8 @@
 //  Copyright © 2016年 PL. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface SingNearViewController : BaseViewController
+@interface SingNearViewController : UIViewController
 
 @end

@@ -46,6 +46,8 @@
     [self.view2 pq_updateTextColor:RANDOM_COLOR];
     [self.view2 pq_updateLineColor:RANDOM_COLOR];
     [self.view2 pq_updateTextSelectedColor:RANDOM_COLOR];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
