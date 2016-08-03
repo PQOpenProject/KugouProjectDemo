@@ -31,6 +31,8 @@
 @property (nonatomic,strong) SingTwoViewController * singVC2;
 @property (nonatomic,strong) WatchViewController * watchVC;
 
+//@property (nonatomic,strong) PGQ_SingViewController * singVC;
+
 @property (nonatomic,strong) ListenViewController *listenVC;
 
 @end
@@ -94,34 +96,16 @@
     }];
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - (void)initUI{
     //增加背景
     [self updateForImageWithName:@"theme_default.jpg"];
     [self.view addSubview:self.topView];
-    
-    
+    //create VC
     UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"SingStoryboard" bundle:nil];
     self.singVC2 = [storyBoard instantiateViewControllerWithIdentifier:@"singVC2"];
-    
     self.watchVC = [[WatchViewController alloc]init];
-    
     self.listenVC= [[ListenViewController alloc]init];
-    
-    
+    //add VC to array
     NSArray * VCS = @[self.listenVC,self.watchVC,self.singVC2];
     
     [self addChildViewController:self.listenVC];
@@ -138,7 +122,9 @@
     [self.view addSubview:self.centerView];
     
     [self.view addSubview:self.bottomView];
+    
 }
+
 - (void)fitFrameForChildViewController:(UIViewController *)chileViewController{
     CGRect frame = self.view.frame;
     frame.origin.y = 0;
