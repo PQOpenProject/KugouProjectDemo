@@ -25,6 +25,10 @@
     view.alpha = 0.8;
 
     [self.view addSubview:view];
+    self.view2 = [PQTopTextBottomLineView pq_topTextBottomLineWithHeight:44 titles:@[@"新闻",@"Hot",@"社会",@"经济",@"科技",@"我去"] clickItem:^(NSString *string, NSInteger itemIndex) {
+        
+    }];
+    [self.view addSubview:self.view2];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,7 +37,10 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"watch - %@",self.navigationController);
+    [self.view2 pq_setSelectedItem:rand()%5];
+    [self.view2 pq_updateTextColor:RANDOM_COLOR];
+    [self.view2 pq_updateLineColor:RANDOM_COLOR];
+    [self.view2 pq_updateTextSelectedColor:RANDOM_COLOR];
 }
 
 

@@ -102,4 +102,25 @@
     self.lineLabel.backgroundColor = lineColor;
 }
 
+/**
+ *  更新文字颜色
+ *
+ *  @param textColor
+ */
+- (void)pq_updateTextColor:(UIColor *)textColor{
+    for (UIButton * btn in self.buttons) {
+        [btn setTitleColor:textColor forState:UIControlStateNormal];
+    }
+}
+/**
+ *  更新文字选中时颜色
+ *
+ *  @param textColor
+ */
+- (void)pq_updateTextSelectedColor:(UIColor *)textColor{
+    for (UIButton * btn in self.buttons) {
+        [btn setTitleColor:textColor forState:UIControlStateSelected];
+    }
+}
+
 @end

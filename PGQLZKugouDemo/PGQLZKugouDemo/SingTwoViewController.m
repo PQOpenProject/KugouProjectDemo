@@ -98,6 +98,7 @@ static  NSString * const identifier = @"SING_TWOCELL";
     
     [self.headView bodyViewClickItem:^(NSInteger item) {
         NSLog(@"在唱页面点击了 body - %ld",item);
+        
     }];
 }
 

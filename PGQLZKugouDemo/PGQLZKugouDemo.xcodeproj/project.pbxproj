@@ -29,6 +29,7 @@
 		818545C01D42231500FFA8B2 /* PGQLZKugouDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 818545BF1D42231500FFA8B2 /* PGQLZKugouDemoUITests.m */; };
 		8188F9361D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188F9351D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m */; };
 		81E511421D50484800A0261A /* PQTopTextBottomLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E511411D50484800A0261A /* PQTopTextBottomLineView.m */; };
+		81E65DD21D517F4D00BEE9B4 /* SingNearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E65DD11D517F4D00BEE9B4 /* SingNearViewController.m */; };
 		81F397461D4C86CE00474D18 /* SingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F397451D4C86CE00474D18 /* SingViewController.m */; };
 		81F397481D4C86ED00474D18 /* SingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F397471D4C86ED00474D18 /* SingStoryboard.storyboard */; };
 		81F3974B1D4C971400474D18 /* PQ_TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F3974A1D4C971400474D18 /* PQ_TimerManager.m */; };
@@ -106,6 +107,8 @@
 		8188F9351D4A09E1001A1E75 /* UIAlertController+PQ_alertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+PQ_alertView.m"; sourceTree = "<group>"; };
 		81E511401D50484800A0261A /* PQTopTextBottomLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQTopTextBottomLineView.h; sourceTree = "<group>"; };
 		81E511411D50484800A0261A /* PQTopTextBottomLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQTopTextBottomLineView.m; sourceTree = "<group>"; };
+		81E65DD01D517F4D00BEE9B4 /* SingNearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingNearViewController.h; sourceTree = "<group>"; };
+		81E65DD11D517F4D00BEE9B4 /* SingNearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingNearViewController.m; sourceTree = "<group>"; };
 		81F397441D4C86CE00474D18 /* SingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingViewController.h; sourceTree = "<group>"; };
 		81F397451D4C86CE00474D18 /* SingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingViewController.m; sourceTree = "<group>"; };
 		81F397471D4C86ED00474D18 /* SingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SingStoryboard.storyboard; sourceTree = "<group>"; };
@@ -287,6 +290,35 @@
 			path = PGQLZKugouDemoUITests;
 			sourceTree = "<group>";
 		};
+		81E65DCF1D517F3200BEE9B4 /* 附近 */ = {
+			isa = PBXGroup;
+			children = (
+				81E65DD01D517F4D00BEE9B4 /* SingNearViewController.h */,
+				81E65DD11D517F4D00BEE9B4 /* SingNearViewController.m */,
+			);
+			name = "附近";
+			sourceTree = "<group>";
+		};
+		81E65DD31D517FCE00BEE9B4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				81E65DCF1D517F3200BEE9B4 /* 附近 */,
+				81E65DD41D51803100BEE9B4 /* 唱 */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		81E65DD41D51803100BEE9B4 /* 唱 */ = {
+			isa = PBXGroup;
+			children = (
+				81F397441D4C86CE00474D18 /* SingViewController.h */,
+				81F397451D4C86CE00474D18 /* SingViewController.m */,
+				810679E01D4F3A03001C2ECE /* SingTwoViewController.h */,
+				810679E11D4F3A03001C2ECE /* SingTwoViewController.m */,
+			);
+			name = "唱";
+			sourceTree = "<group>";
+		};
 		81F3974C1D4C972400474D18 /* 类的封装 */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,14 +388,11 @@
 		81F5F02D1D45A1F600A65198 /* 唱 */ = {
 			isa = PBXGroup;
 			children = (
+				81E65DD31D517FCE00BEE9B4 /* ViewController */,
 				810679EF1D4F3C5E001C2ECE /* header */,
 				810679E91D4F3BD6001C2ECE /* cell */,
 				810679E31D4F3A1B001C2ECE /* view */,
-				81F397441D4C86CE00474D18 /* SingViewController.h */,
-				81F397451D4C86CE00474D18 /* SingViewController.m */,
 				81F397471D4C86ED00474D18 /* SingStoryboard.storyboard */,
-				810679E01D4F3A03001C2ECE /* SingTwoViewController.h */,
-				810679E11D4F3A03001C2ECE /* SingTwoViewController.m */,
 			);
 			name = "唱";
 			sourceTree = "<group>";
@@ -708,6 +737,7 @@
 				810679DF1D4F0C06001C2ECE /* UIImage+ImageEffects.m in Sources */,
 				8185459F1D42231500FFA8B2 /* AppDelegate.m in Sources */,
 				810679E61D4F3A55001C2ECE /* SingHeadView.m in Sources */,
+				81E65DD21D517F4D00BEE9B4 /* SingNearViewController.m in Sources */,
 				81F5F0531D45A79B00A65198 /* PGQ_BaseTopView.m in Sources */,
 				81F5F04F1D45A64B00A65198 /* PGQ_ScrollModel.m in Sources */,
 				81F5F0571D45A81D00A65198 /* PGQ_BaseBottomView.m in Sources */,

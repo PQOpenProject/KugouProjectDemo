@@ -31,4 +31,16 @@
  *  @param lineColor
  */
 - (void)pq_updateLineColor:(UIColor *)lineColor;
+/**
+ *  更新文字颜色
+ *
+ *  @param textColor
+ */
+- (void)pq_updateTextColor:(UIColor *)textColor;
+/**
+ *  更新文字选中时颜色
+ *
+ *  @param textColor 
+ */
+- (void)pq_updateTextSelectedColor:(UIColor *)textColor;
 @end
