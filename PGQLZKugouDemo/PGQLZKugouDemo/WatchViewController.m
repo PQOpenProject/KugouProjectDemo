@@ -25,7 +25,7 @@
     view.alpha = 0.8;
 
     [self.view addSubview:view];
-   
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {

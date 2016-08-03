@@ -12,10 +12,6 @@
 #import "SingHeader.h"
 @interface RootViewController ()
 /**
- *  顶部view
- */
-@property (nonatomic,strong) PGQ_BaseTopView *topView;
-/**
  *  中间view
  */
 @property (nonatomic,strong) PGQ_BaseCenterView *centerView;
@@ -103,8 +99,4 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
-
-
-
 @end
