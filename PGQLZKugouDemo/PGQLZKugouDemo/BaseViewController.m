@@ -24,8 +24,6 @@
     return _baseVM;
 }
 
-static const NSString * NOTIFACATION_SCROLL = @"liandongSCROOL";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];

@@ -11,9 +11,6 @@
 @class RACSignal;
 @interface BaseViewModel : NSObject
 
-@property (nonatomic,assign) NSInteger centerSelectedIndex;
-@property (nonatomic,assign) BOOL isIconSelected;
-
 @property (nonatomic,strong) RACCommand *centerViewCommand;
 @property (nonatomic,strong) RACCommand *IconOrSearchCommand;
 

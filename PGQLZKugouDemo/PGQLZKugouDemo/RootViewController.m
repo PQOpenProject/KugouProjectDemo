@@ -45,8 +45,6 @@
 - (void)event{
     //不管是谁发送了消息都相应的的更新
     [self.rootVM.scrollCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
-        
-        NSLog(@"%@ %@",self.navItemTitleView.centerView,[NSThread currentThread]);
         [self.navItemTitleView.centerView pq_setSelectedItem:[x integerValue]];
         [self.centerView updateScrollViewContentOffSetWith:[x integerValue]];
         
@@ -92,14 +90,9 @@
         _showIndexPage = pageIndex;
         [self.rootVM.scrollCommand execute:@(pageIndex)];
     } offSet:^(CGFloat offset) {
-        if (offset < 0) {
-            NSLog(@"...%f",1 - fabs(offset) +0.5);
-            [self.navItemTitleView pq_updateBlueBackgournd:1];
-        }
         if (offset < 1) {
             [self.navItemTitleView pq_updateBlueBackgournd:offset];
         }
-//        NSLog(@"%f",offset);
     }];
     [self.view addSubview:self.centerView];
 }

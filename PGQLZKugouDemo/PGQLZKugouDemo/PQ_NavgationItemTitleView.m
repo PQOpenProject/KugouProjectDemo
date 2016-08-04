@@ -46,7 +46,6 @@ typedef void(^PQ_ISBlock)(BOOL isIcon);
     self.searchBtn.center = CGPointMake(0, 42);
     self.searchBtn.x = self.width - self.searchBtn.width - 10;
     self.centerView = [PQTopTextBottomLineView pq_topTextBottomLineWithHeight:CGRectMake(PL_SRCEEN_WIDTH*0.2  , 20, (PL_SRCEEN_WIDTH) * 0.6, 44) titles:@[@"听",@"看",@"唱"] clickItem:^(NSString *string, NSInteger itemIndex) {
-        NSLog(@"%@",string);
         self.saveBlock(itemIndex);
     }];
     [self.centerView pq_updateLineColor:[UIColor whiteColor]];
