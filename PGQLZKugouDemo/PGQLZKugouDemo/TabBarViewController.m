@@ -28,7 +28,7 @@
     [super viewDidLoad];
     
     RootViewController *root = [[RootViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:root];
+    PLNavigationViewController *nav = [[PLNavigationViewController alloc] initWithRootViewController:root];
     [self addChildViewController:nav];
 }
 

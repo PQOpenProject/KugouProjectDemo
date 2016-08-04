@@ -12,13 +12,13 @@
 /**
  *  快速创建一个上面是字下面是一条带颜色的label，带有动画效果
  *
- *  @param height
+ *  @param rect
  *  @param titles
  *  @param block
  *
  *  @return
  */
-+ (instancetype)pq_topTextBottomLineWithHeight:(CGFloat)height titles:(NSArray *)titles clickItem:(void(^)(NSString * string,NSInteger itemIndex))block;
++ (instancetype)pq_topTextBottomLineWithHeight:(CGRect)frame titles:(NSArray *)titles clickItem:(void(^)(NSString * string,NSInteger itemIndex))block;
 /**
  *  调到指定的项 下标从0开始
  *

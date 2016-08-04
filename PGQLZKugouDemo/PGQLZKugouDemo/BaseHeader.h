@@ -14,6 +14,9 @@
 #import "PGQ_BaseBottomView.h"
 #import "PGQ_BaseCenterView.h"
 #import "PGQ_ScrollModel.h"
+#import "RootViewModel.h"
+#import "PQ_NavgationItemTitleView.h"
+//vm
 #import "BaseViewModel.h"
 
 #endif /* BaseHeader_h */

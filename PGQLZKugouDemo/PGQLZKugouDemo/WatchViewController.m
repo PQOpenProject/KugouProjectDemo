@@ -12,7 +12,7 @@
 #import "PQTopTextBottomLineView.h"
 
 @interface WatchViewController ()
-
+@property (nonatomic,strong) PQTopTextBottomLineView * ttblView;
 @end
 
 @implementation WatchViewController
@@ -20,12 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIView * view = [[UIView alloc]initWithFrame:CGRectMake(50, 100, 300, 300)];
-    view.backgroundColor = [UIColor orangeColor];
-    view.alpha = 0.8;
-
-    [self.view addSubview:view];
-    self.navigationController.navigationBar.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,7 +18,7 @@
 /**
  *  ViewModel
  */
-@property (nonatomic,strong) BaseViewModel * baseVM;
+@property (nonatomic,strong) RootViewModel * rootVM;
 @property (nonatomic,strong) SingTwoViewController * singVC2;
 @property (nonatomic,strong) WatchViewController * watchVC;
 @property (nonatomic,strong) ListenViewController *listenVC;
@@ -27,11 +27,11 @@
 
 @implementation RootViewController
 //懒方法 lazy method
-- (BaseViewModel *)baseVM{
-    if (!_baseVM) {
-        _baseVM = [[BaseViewModel alloc]init];
+- (RootViewModel *)rootVM{
+    if (!_rootVM) {
+        _rootVM = [[RootViewModel alloc]init];
     }
-    return _baseVM;
+    return _rootVM;
 }
 
 - (void)viewDidLoad {
@@ -40,47 +40,64 @@
     [self initUI];
     //处理事件
     [self event];
-    self.navigationController.navigationBar.pq_BarBackgroundColor = 0;
-    [self.navigationController.navigationBar setNavigationBarBackgroundColor:[UIColor blueColor]];
 }
 
 - (void)event{
     //不管是谁发送了消息都相应的的更新
-    [self.baseVM.scrollCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
+    [self.rootVM.scrollCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
+        
+        NSLog(@"%@ %@",self.navItemTitleView.centerView,[NSThread currentThread]);
+        [self.navItemTitleView.centerView pq_setSelectedItem:[x integerValue]];
         [self.centerView updateScrollViewContentOffSetWith:[x integerValue]];
         
         if ([x integerValue] == 2) {
             [self.singVC2 startTopScrollViewTimer];
         }else{
             [self.singVC2 closeTopScrollViewTimer];
-        }    }];
+        }
+    }];
+    
+    [self.baseVM.IconOrSearchCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
+        //滑到指定的页面
+        if ([x boolValue]) {
+            NSLog(@"点击了头像");
+        }
+        else{
+            NSLog(@"点击了搜索");
+        }
+    }];
+    [self.baseVM.centerViewCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
+        [self.rootVM.scrollCommand execute:x];
+    }];
 }
 
 - (void)initUI{
     //增加背景
     [self updateForImageWithName:@"theme_default.jpg"];
     //create VC
-    UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"SingStoryboard" bundle:nil];
     
     self.listenVC = [[ListenViewController alloc] init];
     [self addChildViewController:self.listenVC];
     
-    self.watchVC = [[WatchViewController alloc] init];
+    UIStoryboard *storyBoard1=[UIStoryboard storyboardWithName:@"WatchViewController" bundle:nil];
+    self.watchVC = [storyBoard1 instantiateViewControllerWithIdentifier:@"watchVC"];
     [self addChildViewController:self.watchVC];
     
+    UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"SingStoryboard" bundle:nil];
     self.singVC2 = [storyBoard instantiateViewControllerWithIdentifier:@"singVC2"];
     [self addChildViewController:self.singVC2];
     //添加
     self.centerView = [PGQ_BaseCenterView pgq_baseConterViewWithVCS:@[self.listenVC,self.watchVC,self.singVC2] PageBlock:^(NSInteger pageIndex) {
         //更新
         _showIndexPage = pageIndex;
-        [self.baseVM.scrollCommand execute:@(pageIndex)];
+        [self.rootVM.scrollCommand execute:@(pageIndex)];
     } offSet:^(CGFloat offset) {
-        if (offset < 0 ) {
-            NSLog(@"--%f",2 + offset);
-            self.navigationController.navigationBar.pq_BarBackgroundColor = (1 + offset);
-        }if (offset < 1) {
-            self.navigationController.navigationBar.pq_BarBackgroundColor = offset;
+        if (offset < 0) {
+            NSLog(@"...%f",1 - fabs(offset) +0.5);
+            [self.navItemTitleView pq_updateBlueBackgournd:1];
+        }
+        if (offset < 1) {
+            [self.navItemTitleView pq_updateBlueBackgournd:offset];
         }
 //        NSLog(@"%f",offset);
     }];

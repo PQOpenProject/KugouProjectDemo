@@ -2,21 +2,19 @@
 //  BaseViewModel.h
 //  PGQLZKugouDemo
 //
-//  Created by ios on 16/7/25.
+//  Created by ios on 16/8/4.
 //  Copyright © 2016年 PL. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-@class PGQ_ScrollModel;
+#import <Foundation/Foundation.h>
 @class RACCommand;
-@interface BaseViewModel : UIView
+@class RACSignal;
+@interface BaseViewModel : NSObject
 
-/**
- *  用户scrollView联动
- */
-@property (nonatomic,strong) PGQ_ScrollModel * scrollModel;
-/**
- *  处理ScrollView滑动和点击滑到相应的页面
- */
-@property (nonatomic,strong) RACCommand * scrollCommand;
+@property (nonatomic,assign) NSInteger centerSelectedIndex;
+@property (nonatomic,assign) BOOL isIconSelected;
+
+@property (nonatomic,strong) RACCommand *centerViewCommand;
+@property (nonatomic,strong) RACCommand *IconOrSearchCommand;
+
 @end

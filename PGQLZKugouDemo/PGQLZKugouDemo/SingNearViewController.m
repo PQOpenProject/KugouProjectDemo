@@ -20,7 +20,7 @@
     self.view.backgroundColor = [UIColor redColor];
     
     
-    self.view2 = [PQTopTextBottomLineView pq_topTextBottomLineWithHeight:44 titles:@[@"礼物榜",@"离我最近",@"最新上传"] clickItem:^(NSString *string, NSInteger itemIndex) {
+    self.view2 = [PQTopTextBottomLineView pq_topTextBottomLineWithHeight:CGRectMake(0, 0, PL_SRCEEN_WIDTH, 44) titles:@[@"礼物榜",@"离我最近",@"最新上传"] clickItem:^(NSString *string, NSInteger itemIndex) {
         
     }];
     self.view2.y = 64;

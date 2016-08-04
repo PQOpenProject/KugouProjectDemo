@@ -10,6 +10,7 @@
 #import "SingHeader.h"
 @interface SingTwoViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (weak, nonatomic) IBOutlet UIView *backgroundHead;
 @property (nonatomic,strong) SingHeadView * headView ;
 
 @end

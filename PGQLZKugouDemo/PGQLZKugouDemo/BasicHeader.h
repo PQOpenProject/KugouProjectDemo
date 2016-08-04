@@ -11,8 +11,6 @@
 
 //viwecontroller
 #import "RootViewController.h"
-#import "UIControl+PQControlExtension.h"
-#import "UIImage+pgqImageExtension.h"
 #import "IntroduceViewController.h"
 //Listen
 #import "ListenViewController.h"
@@ -28,6 +26,14 @@
 #import "UIView+pgqViewExtension.h"
 #import "UIAlertController+PQ_alertView.h"
 #import "UINavigationBar+PQNavBarExtension.h"
+#import "UIControl+PQControlExtension.h"
+#import "UIImage+pgqImageExtension.h"
+
+
+
+//view
+#import "PQTopTextBottomLineView.h"
+
 
 //third party
 #import "Masonry.h"
@@ -40,7 +46,8 @@
 
 
 //随机颜色
-#define RANDOM_COLOR [UIColor colorWithRed:random()%255/255.0 green:random()%255/255.0 blue:random()%255/255.0 alpha:1 ]
+#define RANDOM_COLOR [UIColor colorWithRed:random()%255/255.0 green:random()%255/255.0 blue:random()%255/255.0 alpha:1]
+#define PL_COLORRGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 //屏幕宽高
 #define PL_SRCEEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define PL_SRCEEN_HEIGHT [UIScreen mainScreen].bounds.size.height

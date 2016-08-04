@@ -33,17 +33,17 @@
     return _buttons;
 }
 
-+ (instancetype)pq_topTextBottomLineWithHeight:(CGFloat)height titles:(NSArray *)titles clickItem:(void(^)(NSString * string,NSInteger itemIndex))block{
-    PQTopTextBottomLineView * ttbl = [[PQTopTextBottomLineView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, ((height < 44) ? 44:height))];
++ (instancetype)pq_topTextBottomLineWithHeight:(CGRect)frame titles:(NSArray *)titles clickItem:(void(^)(NSString * string,NSInteger itemIndex))block{
+    PQTopTextBottomLineView * ttbl = [[PQTopTextBottomLineView alloc]initWithFrame:frame];
     ttbl.titles = titles;
     [ttbl setUp:block];
     return ttbl;
 }
 
 - (void)setUp:(void(^)(NSString * string,NSInteger itemIndex))block{
-    CGFloat widthBtn = PL_SRCEEN_WIDTH / self.titles.count;
+    CGFloat widthBtn = self.width / self.titles.count;
     for (NSInteger i = 0; i < self.titles.count; i++) {
-        UIButton * button = [self createButtonWithTitle:self.titles[i] frame:CGRectMake(i * widthBtn, 0, widthBtn, 44) tag:i];
+        UIButton * button = [self createButtonWithTitle:self.titles[i] frame:CGRectMake(i * widthBtn, self.height - 4 - 44, widthBtn, 40) tag:i];
         if (i == 0) {
             button.selected = YES;
             _lastButton = button;
@@ -72,8 +72,8 @@
 - (UIButton *)createButtonWithTitle:(NSString *)title frame:(CGRect)frame tag:(NSInteger)tag{
     UIButton * button = [[UIButton alloc]initWithFrame:frame];
     [button setTitle:title forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blueColor] forState:UIControlStateSelected];
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    [button setTitleColor:[UIColor blueColor] forState:UIControlStateSelected];
+//    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     button.tag = tag;
     [RACObserve(button, selected) subscribeNext:^(id x) {
         if (button.selected == YES) {

@@ -7,7 +7,7 @@
 //
 
 #import "PLNavigationViewController.h"
-
+#import "BasicHeader.h"
 @interface PLNavigationViewController ()
 
 @end
@@ -18,7 +18,12 @@
     [super viewDidLoad];
 //    self.navigationBar.hidden = YES;
 //    self.interactivePopGestureRecognizer.enabled = NO;
-    self.title = @"我去";
+    self.navigationItem.title = @"456465";
+//    self.navigationBar.pq_BarBackgroundColor = 0;
+    self.navigationBar.pq_isShowBGClolor = NO;
+    //    [self.navigationController.navigationBar setNavigationBarBackgroundColor:[UIColor blueColor]];
+    self.navigationBar.barTintColor = [UIColor blueColor];
+//    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)didReceiveMemoryWarning {

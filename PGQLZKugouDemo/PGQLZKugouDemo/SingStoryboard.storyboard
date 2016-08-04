@@ -238,7 +238,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MuX-OY-1on">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="518"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -246,11 +246,17 @@
                                     <outlet property="delegate" destination="Qed-RB-NOe" id="GrG-lF-imc"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" id="5rJ-R5-6km">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.014718076360697552" green="0.30077020219135975" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="eho-jn-MT9"/>
                     <connections>
+                        <outlet property="backgroundHead" destination="5rJ-R5-6km" id="pbh-kr-OrA"/>
                         <outlet property="myTableView" destination="MuX-OY-1on" id="kh0-hG-CRT"/>
                     </connections>
                 </viewController>
